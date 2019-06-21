@@ -1,0 +1,8 @@
+ <!-- Reuse -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="stamp-template">
+            <g>
+              <circle cx="18" cy="15" r="14" fill="#387F05" stroke-width="2" stroke="#387F05"
+
+                style="fill-opacity:0.4;"></circle>
+              <text x="9" y="23" font-family="Arial" font-size="25" fill="#387F05">R</text>
+            </g> </svg>
