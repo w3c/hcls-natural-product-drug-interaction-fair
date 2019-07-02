@@ -11,6 +11,12 @@
     <script class='remove'>
       var respecConfig = {
       localBiblio: {
+      "bioportal":{
+      "title":"NCBO Bioportal",
+      "publisher":"National Center for Biomedical Ontology",
+      "date":"2019",
+      "href":"https://bioportal.bioontology.org/"
+      },
       "catalog-generator":{
       "title": "Project Open Data - Catalog Generator",
       "publisher": "United States Government ",
@@ -36,8 +42,35 @@
       "date": "2019",
       "href": "https://dataverse.org/"}
       ,
+      "DATS":{
+      "authors": [
+      "Susanna-Assunta Sansone",
+      "Alejandra Gonzalez-Beltran",
+      "Philippe Rocca-Serra",
+      "George Alter",
+      "Jeffrey S. Grethe",
+      "Hua Xu",
+      "Ian M. Fore",
+      "Jared Lyle",
+      "Anupama E. Gururaj",
+      "Xiaoling Chen",
+      "Hyeon-eui Kim",
+      "Nansu Zong",
+      "Yueling Li",
+      "Ruiling Liu",
+      "I. Burak Ozyurt",
+      "Lucila Ohno-Machado"
+      ],
+      "href": "https://www.nature.com/articles/sdata201759",
+      "title": "DATS, the data tag suite to enable discoverability of datasets",
+      "publisher": "Nature Scientific Data",
+      "repository": "https://github.com/datatagsuite",
+      "date": "6/6/2017"
+      }
+      ,      
       "dcat":{
       "authors": [
+      
       "Alejandra Gonzalez Beltran",
       "David Browning",
       "Simon Cox",
@@ -61,8 +94,21 @@
       "repository": "https://github.com/w3c/dxwg",
       "id": "vocab-dcat-2",
       "date": "16 October 2018"
-      }
+      }      
       ,
+      "DIDEO-ontobee":{
+      "title": "DIDEO",
+      "publisher": "Ontobee",
+      "date": "2018",
+      "href": "http://www.ontobee.org/ontology/DIDEO"}
+      ,
+      "DIDEO-published":{
+      "authors":["J Judkins","J Tay-Sontheimer","RD Boyce","M Brochhausen."],
+      "title":"Extending the DIDEO ontology to include entities from the natural product drug interaction domain of discourse.",
+      "publisher":"J Biomed Semantics",
+      "date":"May 9 2018",
+      "href":"https://doi.org/10.1186/s13326-018-0183-z."
+      },
       "dryad":{
       "title": "Dryad Digital Repository",
       "publisher": "Dryad",
@@ -95,6 +141,12 @@
       "date": "January 2017",
       "href": "https://www.w3.org/TR/dwbp"}
       ,
+      "ontology-lookup":{
+      "title":"Ontology Lookup Service",
+      "publisher":"European Bioinformatics Institute",
+      "date":"2019",
+      "href":"https://www.ebi.ac.uk/ols/index"
+      },
       "figshare":{
       "title": "figshare",
       "publisher": "figshare community",
@@ -147,7 +199,18 @@
       "id": "html-rdfa",
       "date": "17 March 2015"
       }
-      ,      
+      ,
+      "DC11":{
+      "href": "http://dublincore.org/documents/dces/",
+      "title": "Dublin Core Metadata Element Set, Version 1.1",
+      "publisher": "DCMI",
+      "status": "DCMI Recommendation",
+      "versions": [
+      "DC11-20120614"
+      ],
+      "id": "DC11",
+      "date": "14 June 2012"
+      },
       "JSON-LD":{
       "authors": [
       "Manu Sporny",
@@ -187,6 +250,27 @@
       "href":"https://doi.org/10.1155/2014/823853"
       }
       ,
+      "martens-2011":{
+       "title": "MzML—a Community Standard for Mass Spectrometry Data.",
+       "authors":[
+          "Lennart Martens",
+         "Matthew Chambers",
+         "Marc Sturm",
+         "Darren Kessner",
+        "Fredrik Levander",
+        "Jim Shofstahl",
+       "Wilfred H. Tang"
+      ],
+      "publisher": "Molecular &amp; Cellular Proteomics",
+      "date": "2011",
+      "href": "https://doi.org/10.1074/mcp.R110.000133"}
+      ,
+      "ontobee":{
+      "title":"Ontobee",
+      "publisher":"OBO Foundry",
+      "date":"2019",
+      "href":"http://www.ontobee.org/"
+      },
       "Posadzki-2013":{
       "authors": [
       "Posadzki, P.",
@@ -205,6 +289,29 @@
       "date": "2019",
       "href": "https://project-open-data.cio.gov/v1.1/metadata-resources/"}
       ,
+      "prov-overview":{
+      "authors": [
+      "Paul Groth",
+      "Luc Moreau"
+      ],
+      "href": "https://www.w3.org/TR/prov-overview/",
+      "title": "PROV-Overview",
+      "status": "NOTE",
+      "publisher": "W3C",
+      "deliveredBy": [
+      {
+      "url": "https://www.w3.org/2011/prov/",
+      "shortname": "prov"
+      }
+      ],
+      "versions": [
+      "prov-overview-20130430",
+      "prov-overview-20130312",
+      "prov-overview-20121211"
+      ],
+      "id": "prov-overview",
+      "date": "30 April 2013"
+      },
       "schema.org":{
       "title": "Schema.org",
       "publisher": "Schema.org",
@@ -282,7 +389,7 @@
       company: "University of Pittsburgh"
       }
       ],
-      github: "https://github.com/w3c/hclscg-npdi-fair/",
+      github: "https://github.com/w3c/hcls-natural-product-drug-interaction-fair",
       shortName: "NPDI-FAIR",
       wg: "Semantic Web in Health Care and Life Sciences Community Group",
       wgPublicList: "public-hclscg",
@@ -475,11 +582,7 @@
     <i>Clinical:</i> Appropriately designed clinical pharmacokinetic interaction studies where the natural product is the precipitant and a drug (or drugs) is the object can provide a definitive assessment of interaction risk. Clinical data include pharmacokinetic outcomes (AUC, Cmax, Tmax, t1/2) describing object drug disposition in the absence and presence of the precipitating natural product.
   </p>
 
-  <div class="issue">
-    <p>
-      <i>Epidemiologic:</i> TODO -- decide if epidemiologic data is within scope
-    </p>
-  </div>
+  <div class="issue" data-number="1"></div>
 </section>
 
 <section class='informative'>
@@ -497,11 +600,7 @@
 
 <section class='informative'>
   <h2>Namespaces</h2>
-  <div class="issue">
-    <p>
-      TODO: decide if this section is relevant to this specific report
-    </p>
-  </div>
+  <div class="issue" data-number="2"></div>
 </section>
 
 <section class='informative'>
@@ -664,7 +763,7 @@
     </tr>
 
     <tr>
-      <td class="benefitsList"><a href="#rec-standard-vocabularies"> Strive to standardize all data elements</a>
+      <td class="benefitsList"><a href="#rec-standard-vocabularies"> Strive to use standard data elements</a>
 	<img src="W3C-Images/interoperability-small.svg" alt="Interoperability" class="benefitIcon interoperabilityIcon">
 	<img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
       </td>
@@ -792,9 +891,7 @@
 	</p>
 
 	<h4 class="subhead" id="evidence-1" resource="#evidence">Evidence</h4>
-	<div class="issue">
-	  <p>Fang et al. proposed a systems pharmacology infrastructure to predict new drug targets and anticancer indications of natural products.....PMID: 28956927</p>
-	</div>
+	  <p>TODO: Fang et al. proposed a systems pharmacology infrastructure to predict new drug targets and anticancer indications of natural products.....PMID: 28956927</p>
       </div>
     </section>
 
@@ -832,9 +929,7 @@
 	</p>
 
 	<h4 class="subhead" id="evidence-2" resource="#evidence">Evidence</h4>
-	<div class="issue">
 	  <p>TODO cite Force 11 and Research Resource Identifiers</p>
-	</div>
       </div>
     </section>
 
@@ -872,9 +967,7 @@
 	</p>
 
 	<h4 class="subhead" id="evidence-3" resource="#evidence">Evidence</h4>
-	<div class="issue">
-	  <p>A short summary of evidence supporting the recommended approach.</p>
-	</div>
+	  <p>TODO: A short summary of evidence supporting the recommended approach.</p>
       </div>    
     </section>
 
@@ -890,16 +983,12 @@
 	  A dataset produced from any kind of NPDI study will be more easily found and reused by other researchers if important facts about the dataset are described using standardized metadata elements that make since for the domain. For example, Google's new Dataset Search indexes sites that prpvide metadata using Schema.org [[google-data-search]]. 
 	</p>
 	<h4 class="subhead" id="intended-outcome-4" resource="#intended-outcome">Intended Outcome</h4>
-	<p>...  
+	<p> Researchers should be able to find data on the lab website much more easily. The use of standards that are used by data search engines should increase the specificity of natural product-drug interaction search results. The metadata can provide clarity on data ownership and access rights that will help facilitate re-use.
 	  <ul class="benefitsList">
 	    <!-- This text list is replaced by the icons by scripting -->
 	    <li class="hidden">Findability</li>
-	    <li class="hidden">Access</li>
-	    <li class="hidden">Interoperability</li>
 	    <li class="hidden">Reuse</li>
 	    <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability" class="benefitIcon findabilityIcon"></li>
-	    <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
-	    <li class="icon"><img src="W3C-Images/interoperability.svg" alt="Interoperability" class="benefitIcon interoperabilityIcon"></li>
 	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
 	  </ul>
 	</p>
@@ -915,9 +1004,7 @@
 	</p>
 
 	<h4 class="subhead" id="evidence-4" resource="#evidence">Evidence</h4>
-	<div class="issue">
-	    <p>A short summary of evidence supporting the recommended approach.</p>
-	</div>
+	<p>TODO: A short summary of evidence supporting the recommended approach.</p>	
       </div>    
     </section>
 
@@ -953,9 +1040,7 @@
 	</p>
 
 	<h4 class="subhead" id="evidence-5" resource="#evidence">Evidence</h4>
-	<div class="issue">
-	  <p>A short summary of evidence supporting the recommended approach.</p>
-	</div>
+	<p>TODO: A short summary of evidence supporting the recommended approach.</p>	
       </div>    
     </section>
 
@@ -967,13 +1052,14 @@
 
 	<h4 class="subhead" id="why-6">Why</h4>
 	<p>
-	  ...single URL that is much easier to work with...clients can request whatever format they need...
+	  Content negotiation make it possible to use single URL for each dataset rather than a different URL for each format (e.g., Excel, CSV, XML, JSON, etc.). Clients can request whatever format they need by specifying the format type in the HTTP request. 
 	</p>
 	<h4 class="subhead" id="intended-outcome-6" resource="#intended-outcome">Intended Outcome</h4>
-	<p>...  
+	<p> A single URL to a given dataset makes access much easier. Also, a single URL is easier to reference and track, increasing the potential for re-use.
 	  <ul class="benefitsList">
 	    <!-- This text list is replaced by the icons by scripting -->
 	    <li class="hidden">Access</li>
+	    <li class="hidden">Reuse</li>
 	    <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
 	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
 	  </ul>
@@ -990,9 +1076,7 @@
 	</p>
 
 	<h4 class="subhead" id="evidence-6" resource="#evidence">Evidence</h4>
-	<div class="issue">
-	  <p>A short summary of evidence supporting the recommended approach.</p>
-	</div>
+	<p>TODO: A short summary of evidence supporting the recommended approach.</p>
       </div>    
     </section>
 
@@ -1002,52 +1086,27 @@
     	<p><span id="rec-lab-7" class="practicelab">Make the update frequency of the data explicit</span></p>
     	<p class="practicedesc">Make the update frequency of the data explicit</p>
 
-    	<h4 class="subhead" id="why-7">Why</h4>
-    	<p>
-    	  ...
-    	</p>
-    	<h4 class="subhead" id="intended-outcome-7" resource="#intended-outcome">Intended Outcome</h4>
-    	<p>...
-    	  <ul class="benefitsList">
-    	    <!-- This text list is replaced by the icons by scripting -->
-    	    <li class="hidden">Reuse</li>
-    	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
-    	  </ul>
-    	</p>
-
-    	<h4 class="subhead" id="possible-approach-to-implementation-7" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
-    	<p>
-    	  ...
-    	</p>
-
-    	<h4 class="subhead" id="how-to-test-7" resource="#how-to-test">How to Test</h4>
-    	<p>
-    	  ...
-    	</p>
-
-    	<h4 class="subhead" id="evidence-7" resource="#evidence">Evidence</h4>
-    	<div class="issue">
-    	  <p>A short summary of evidence supporting the recommended approach.</p>
-    	</div>
-      </div>
+	See the recommendation <a href="https://www.w3.org/TR/dwbp/#AccessUptoDate" target=_blank>Provide data up to date</a> in the W3C report "Data on the Web Best Practices" [[dwbp]].
     </section>
 
     <section id="rec-standard-vocabularies">
-      <h3 class="hidden">Strive to standardize all data elements</h3>
+      <h3 class="hidden">Strive to use standard data elements</h3>
       <div class="practice">
-    	<p><span id="rec-lab-8" class="practicelab">Strive to standardize all data elements</span></p>
-    	<p class="practicedesc">Strive to standardize all data elements</p>
+    	<p><span id="rec-lab-8" class="practicelab">Strive to use standard data elements</span></p>
+    	<p class="practicedesc">Strive to use standard data elements for both dataset metadata and for dataset fields</p>
 
     	<h4 class="subhead" id="why-8">Why</h4>
     	<p>
-    	  ...
+    	  Standard data elements benefit researchers by making it simpler to find and integrate data from different sources.     
     	</p>
     	<h4 class="subhead" id="intended-outcome-8" resource="#intended-outcome">Intended Outcome</h4>
-    	<p>...
+    	<p> The use of standard data elements makes it possible for researchers to quickly integrate datasets that originate from different sources (interoperability). Another benefit is that standardized elements improve data search and retrieval. 
     	  <ul class="benefitsList">
     	    <!-- This text list is replaced by the icons by scripting -->
+	    <li class="hidden">Findability</li>
     	    <li class="hidden">Interoperability</li>
     	    <li class="hidden">Reuse</li>
+	    <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability" class="benefitIcon findabilityIcon"></li>
     	    <li class="icon"><img src="W3C-Images/interoperability.svg" alt="Interoperability" class="benefitIcon interoperabilityIcon"></li>
     	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
     	  </ul>
@@ -1055,7 +1114,10 @@
 
     	<h4 class="subhead" id="possible-approach-to-implementation-8" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
     	<p>
-    	  ...
+    	  Standard data elements should be used for both dataset metadata and the datasets themselves. For metadata, researchers should use broadly accepted metadata standards such as the Data Tag Suite (DATS) [[DATS]], Dublin Core [[DC11]], or PROV [[prov-overview]]. If researchers are contributing their data to a repository, researchers should confirm repository should use a widely accepted metadata standard. Zenodo [[zenodo]], Figshare [[figshare]], and most university/research institute data catalogs satisfy this recommendation.
+	</p>
+	<p>
+	  For datasets (rather than dataset metadata), researchers should aim to maximise the reuse terms from existing broadly used ontologies and/or terminologies for data fields and values. One simple approach for data spreadsheets is to maintain a seperate file with a data dictionary for the fields used in the dataset. The dictionary should provide each data element's name (label), definition, and persistent identifier. Another approach would be to provide the dataset in a format such as XML, JSON-LD, of RDF that can explicitly associate each data item with a standard data element. Entire sets of standar data elements exist for some kinds of experiments. For example,  mzML is an open and generic XML (extensible markup language) representation of MS data [[martens-2011]]. The DIDEO ontology provides standard definitions for many data elements that arise from <emph>in vitro</emph> and clinical NPDI [[DIDEO-published]][[DIDEO-ontobee]]. Researcher can use ontology search tools such as Bioportal [[bioportal]], Ontobee [[ontobee]], or the EMBL-EBI Ontology Lookup Service [[ontology-lookup]] to search for candidate terms that provide clear definitions and persistent URLs. 	  
     	</p>
 
     	<h4 class="subhead" id="how-to-test-8" resource="#how-to-test">How to Test</h4>
@@ -1064,9 +1126,7 @@
     	</p>
 
     	<h4 class="subhead" id="evidence-8" resource="#evidence">Evidence</h4>
-    	<div class="issue">
-    	  <p>A short summary of evidence supporting the recommended approach.</p>
-    	</div>
+   	<p>TODO: A short summary of evidence supporting the recommended approach.</p>
       </div>
     </section>
 
@@ -1074,22 +1134,20 @@
       <h3 class="hidden">If possible, provide access to data via a well-documented REST-full API</h3>
       <div class="practice">
     	<p><span id="rec-lab-9" class="practicelab">If possible, provide access to data via a well-documented REST-full API</span></p>
-    	<p class="practicedesc">If possible, provide access to data via a well-documented REST-full API</p>
+    	<p class="practicedesc">If possible, provide the ability for persons with programming experience to write scripts/programs that can access data via a well-documented REST-full API</p>
 
     	<h4 class="subhead" id="why-9">Why</h4>
     	<p>
-    	  ...
+    	  Access to datasets and associated metadata via a REST API makes it much simpler for researchers and developers to integrate some portion of the data into web sites and applications. 
     	</p>
     	<h4 class="subhead" id="intended-outcome-9" resource="#intended-outcome">Intended Outcome</h4>
-    	<p>...
+    	<p> The primary benefit is simple programmatic access to NPDI data and metadata. APIs result in data that is computable and more likely to be reused in research workflows. 
     	  <ul class="benefitsList">
     	    <!-- This text list is replaced by the icons by scripting -->
     	    <li class="hidden">Access</li>
-    	    <li class="hidden">Interoperability</li>
     	    <li class="hidden">Reuse</li>
     	    <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability" class="benefitIcon findabilityIcon"></li>
     	    <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
-    	    <li class="icon"><img src="W3C-Images/interoperability.svg" alt="Interoperability" class="benefitIcon interoperabilityIcon"></li>
     	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
     	  </ul>
     	</p>
@@ -1105,9 +1163,7 @@
     	</p>
 
     	<h4 class="subhead" id="evidence-9" resource="#evidence">Evidence</h4>
-    	<div class="issue">
-    	  <p>A short summary of evidence supporting the recommended approach.</p>
-    	</div>
+    	<p>TODO: A short summary of evidence supporting the recommended approach.</p>
       </div>
     </section>
 
@@ -1118,33 +1174,7 @@
     	<p><span id="rec-lab-10" class="practicelab">Provide a license for data usage</span></p>
     	<p class="practicedesc">Provide a license for data usage</p>
 
-    	<h4 class="subhead" id="why-10">Why</h4>
-    	<p>
-    	  ...
-    	</p>
-    	<h4 class="subhead" id="intended-outcome-10" resource="#intended-outcome">Intended Outcome</h4>
-    	<p>...
-    	  <ul class="benefitsList">
-    	    <!-- This text list is replaced by the icons by scripting -->
-    	    <li class="hidden">Reuse</li>
-    	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
-    	  </ul>
-    	</p>
-
-    	<h4 class="subhead" id="possible-approach-to-implementation-10" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
-    	<p>
-    	  ...
-    	</p>
-
-    	<h4 class="subhead" id="how-to-test-10" resource="#how-to-test">How to Test</h4>
-    	<p>
-    	  ...
-    	</p>
-
-    	<h4 class="subhead" id="evidence-10" resource="#evidence">Evidence</h4>
-    	<div class="issue">
-    	  <p>A short summary of evidence supporting the recommended approach.</p>
-    	</div>
+	See  See the recommendation <a href="https://www.w3.org/TR/dwbp/#licenses" target=_blank>Provide data license information</a> in the W3C report "Data on the Web Best Practices" [[dwbp]]. 
       </div>
     </section>
 
@@ -1154,33 +1184,8 @@
     	<p><span id="rec-lab-X" class="practicelab">Give future users of the data a way to provide feedback</span></p>
     	<p class="practicedesc">Give future users of the data a way to provide feedback</p>
 
-    	<h4 class="subhead" id="why-11">Why</h4>
-    	<p>
-    	  ...
-    	</p>
-    	<h4 class="subhead" id="intended-outcome-11" resource="#intended-outcome">Intended Outcome</h4>
-    	<p>...
-    	  <ul class="benefitsList">
-    	    <!-- This text list is replaced by the icons by scripting -->
-    	    <li class="hidden">Reuse</li>
-    	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
-    	  </ul>
-    	</p>
-
-    	<h4 class="subhead" id="possible-approach-to-implementation-11" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
-    	<p>
-    	  ...
-    	</p>
-
-    	<h4 class="subhead" id="how-to-test-11" resource="#how-to-test">How to Test</h4>
-    	<p>
-    	  ...
-    	</p>
-
-    	<h4 class="subhead" id="evidence-11" resource="#evidence">Evidence</h4>
-    	<div class="issue">
-    	  <p>A short summary of evidence supporting the recommended approach.</p>
-    	</div>
+	See the two recommendations in the section <a href="https://www.w3.org/TR/dwbp/#feedbacksection" target=_blank>Feedback</a> in the W3C report "Data on the Web Best Practices" [[dwbp]].
+	    	
       </div>
     </section>
 
@@ -1264,9 +1269,7 @@
     	</p>
 
     	<h4 class="subhead" id="evidence-12" resource="#evidence">Evidence</h4>
-    	<div class="issue">
-    	  <p>TODO</p>
-    	</div>
+    	<p>TODO</p>
       </div>
     </section>
 
@@ -1298,15 +1301,12 @@
     	</p>
 
     	<h4 class="subhead" id="how-to-test-13" resource="#how-to-test">How to Test</h4>
-    	<div class="issue">
     	<p>
     	  TODO
     	</p>
-      </div> 
+
     	<h4 class="subhead" id="evidence-13" resource="#evidence">Evidence</h4>
-    	<div class="issue">
-    	  <p>A short summary of evidence supporting the recommended approach.</p>
-    	</div>
+    	  <p>TODO: A short summary of evidence supporting the recommended approach.</p>
       </div> 
     </section>
 
@@ -1323,7 +1323,6 @@
     	</p>
     	<h4 class="subhead" id="intended-outcome-14" resource="#intended-outcome">Intended Outcome</h4>
 
-	<div class="issue">
     	<p>TODO
     	  <ul class="benefitsList">
     	    <!-- This text list is replaced by the icons by scripting -->
@@ -1335,7 +1334,6 @@
     	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
     	  </ul>
     	</p>
-	</div>
 	
     	<h4 class="subhead" id="possible-approach-to-implementation-14" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
     	<p>
@@ -1348,9 +1346,7 @@
     	</p>
 
     	<h4 class="subhead" id="evidence-14" resource="#evidence">Evidence</h4>
-    	<div class="issue">
-    	  <p>A short summary of evidence supporting the recommended approach.</p>
-    	</div>
+    	<p>TODO: A short summary of evidence supporting the recommended approach.</p>
       </div>
     </section>
 
@@ -1367,7 +1363,6 @@
     	</p>
     	<h4 class="subhead" id="intended-outcome-16" resource="#intended-outcome">Intended Outcome</h4>
 
-	<div class="issue">
     	<p>TODO
     	  <ul class="benefitsList">
     	    <!-- This text list is replaced by the icons by scripting -->
@@ -1377,7 +1372,6 @@
     	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
     	  </ul>
     	</p>
-	</div>
 
     	<h4 class="subhead" id="possible-approach-to-implementation-16" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
     	<p>
@@ -1390,9 +1384,7 @@
     	</p>
 
     	<h4 class="subhead" id="evidence-16" resource="#evidence">Evidence</h4>
-    	<div class="issue">
-    	  <p>A short summary of evidence supporting the recommended approach.</p>
-    	</div>
+    	<p>A short summary of evidence supporting the recommended approach.</p>
       </div>
     </section>
 
