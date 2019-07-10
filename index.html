@@ -1,1192 +1,1559 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset='utf-8'>
-    <title>How to Make Natural Product – Drug Interaction Study Data Findable, Accessible, Interoperable And Reusable (FAIR)</title>
-    <script 
-      src='https://www.w3.org/Tools/respec/respec-w3c-common' 
-      class='remove'>
+    <title>How to Make Natural Product – Drug Interaction Study Data Findable, Accessible, Interoperable And Reusable
+        (FAIR)</title>
+    <script
+            src='https://www.w3.org/Tools/respec/respec-w3c-common'
+            class='remove'>
     </script>
-    
+
     <script class='remove'>
-      var respecConfig = {
-      localBiblio: {
-      "bioportal":{
-      "title":"NCBO Bioportal",
-      "publisher":"National Center for Biomedical Ontology",
-      "date":"2019",
-      "href":"https://bioportal.bioontology.org/"
-      },
-      "catalog-generator":{
-      "title": "Project Open Data - Catalog Generator",
-      "publisher": "United States Government ",
-      "date": "April 2019",
-      "href": "https://project-open-data.cio.gov/catalog-generator"
-      }
-      ,
-      "cedar":{
-      "title": "CEDAR Overview",
-      "publisher": "Center for Expanded Data Annotation and Retrieval (CEDAR)",
-      "date": "April 2019",
-      "href": "https://metadatacenter.org/"}
-      ,
-      "datacite":{
-      "title": "DataCite - Cite Your Data",
-      "publisher": "DataCite ",
-      "date": "April 2019",
-      "href": "https://datacite.org/cite-your-data.html"}
-      ,
-      "dataverse":{
-      "title": "The Dataverse Project - Open source research data repository software",
-      "publisher": "Dataverse Project",
-      "date": "2019",
-      "href": "https://dataverse.org/"}
-      ,
-      "DATS":{
-      "authors": [
-      "Susanna-Assunta Sansone",
-      "Alejandra Gonzalez-Beltran",
-      "Philippe Rocca-Serra",
-      "George Alter",
-      "Jeffrey S. Grethe",
-      "Hua Xu",
-      "Ian M. Fore",
-      "Jared Lyle",
-      "Anupama E. Gururaj",
-      "Xiaoling Chen",
-      "Hyeon-eui Kim",
-      "Nansu Zong",
-      "Yueling Li",
-      "Ruiling Liu",
-      "I. Burak Ozyurt",
-      "Lucila Ohno-Machado"
-      ],
-      "href": "https://www.nature.com/articles/sdata201759",
-      "title": "DATS, the data tag suite to enable discoverability of datasets",
-      "publisher": "Nature Scientific Data",
-      "repository": "https://github.com/datatagsuite",
-      "date": "6/6/2017"
-      }
-      ,      
-      "dcat":{
-      "authors": [
-      
-      "Alejandra Gonzalez Beltran",
-      "David Browning",
-      "Simon Cox",
-      "Peter Winstanley"
-      ],
-      "href": "https://www.w3.org/TR/vocab-dcat-2/",
-      "title": "Data Catalog Vocabulary (DCAT) - revised edition",
-      "status": "WD",
-      "publisher": "W3C",
-      "edDraft": "https://w3c.github.io/dxwg/dcat/",
-      "deliveredBy": [
-      {
-      "url": "https://www.w3.org/2017/dxwg/",
-      "shortname": "dx"
-      }
-      ],
-      "versions": [
-      "vocab-dcat-2-20181016",
-      "vocab-dcat-2-20180508"
-      ],
-      "repository": "https://github.com/w3c/dxwg",
-      "id": "vocab-dcat-2",
-      "date": "16 October 2018"
-      }      
-      ,
-      "DIDEO-ontobee":{
-      "title": "DIDEO",
-      "publisher": "Ontobee",
-      "date": "2018",
-      "href": "http://www.ontobee.org/ontology/DIDEO"}
-      ,
-      "DIDEO-published":{
-      "authors":["J Judkins","J Tay-Sontheimer","RD Boyce","M Brochhausen."],
-      "title":"Extending the DIDEO ontology to include entities from the natural product drug interaction domain of discourse.",
-      "publisher":"J Biomed Semantics",
-      "date":"May 9 2018",
-      "href":"https://doi.org/10.1186/s13326-018-0183-z."
-      },
-      "dryad":{
-      "title": "Dryad Digital Repository",
-      "publisher": "Dryad",
-      "date": "2019",
-      "href": "https://datadryad.org/"}
-      ,
-      "dcmi":{
-      "authors": [
-      "DCMI Usage Board"
-      ],
-      "href": "http://dublincore.org/documents/dcmi-terms/",
-      "title": "DCMI Metadata Terms",
-      "publisher": "DCMI",
-      "status": "DCMI Recommendation",
-      "versions": [
-      "DCTERMS-20101011"
-      ],
-      "id": "DCTERMS",
-      "date": "14 June 2012"
-      }
-      ,
-      "dwbp":{
-      "editors": [
-      "Lóscio, BF.",
-      "Burle, C.",
-      "Calegari, N."
-      ],                
-      "title": "Data on the Web Best Practices",
-      "publisher": "W3C",
-      "date": "January 2017",
-      "href": "https://www.w3.org/TR/dwbp"}
-      ,
-      "ontology-lookup":{
-      "title":"Ontology Lookup Service",
-      "publisher":"European Bioinformatics Institute",
-      "date":"2019",
-      "href":"https://www.ebi.ac.uk/ols/index"
-      },
-      "figshare":{
-      "title": "figshare",
-      "publisher": "figshare community",
-      "date": "2019",
-      "href": "https://figshare.com/"}
-      ,
-      "google-data-testing":{
-      "title": "Google Structured Data Testing Tool",
-      "publisher": "Google",
-      "date": "2019",
-      "href": "https://search.google.com/structured-data/testing-tool#"}
-      ,      
-      "google-data-search":{
-      "title": "Google Dataset Search (beta)",
-      "publisher": "Google",
-      "date": "2019",
-      "href": "https://toolbox.google.com/datasetsearch"}
-      ,
-      "html-rdfa":{
-      "authors": [
-      "Manu Sporny"
-      ],
-      "href": "https://www.w3.org/TR/html-rdfa/",
-      "title": "HTML+RDFa 1.1 - Second Edition",
-      "status": "REC",
-      "publisher": "W3C",
-      "deliveredBy": [
-      {
-      "url": "https://www.w3.org/2010/02/rdfa/",
-      "shortname": "rdfa"
-      }
-      ],
-      "versions": [
-      "html-rdfa-20150317",
-      "html-rdfa-20141216",
-      "html-rdfa-20130822",
-      "html-rdfa-20130625",
-      "html-rdfa-20130207",
-      "html-rdfa-20121213",
-      "html-rdfa-20120911",
-      "html-rdfa-20120329",
-      "html-rdfa-20110525",
-      "html-rdfa-20110405",
-      "html-rdfa-20110113",
-      "html-rdfa-20101019",
-      "html-rdfa-20100624",
-      "html-rdfa-20100304",
-      "html-rdfa-20091015"
-      ],
-      "id": "html-rdfa",
-      "date": "17 March 2015"
-      }
-      ,
-      "DC11":{
-      "href": "http://dublincore.org/documents/dces/",
-      "title": "Dublin Core Metadata Element Set, Version 1.1",
-      "publisher": "DCMI",
-      "status": "DCMI Recommendation",
-      "versions": [
-      "DC11-20120614"
-      ],
-      "id": "DC11",
-      "date": "14 June 2012"
-      },
-      "JSON-LD":{
-      "authors": [
-      "Manu Sporny",
-      "Gregg Kellogg",
-        "Markus Lanthaler"
-      ],
-      "href": "https://www.w3.org/TR/json-ld/",
-      "title": "JSON-LD 1.0",
-      "status": "REC",
-      "publisher": "W3C",
-      "deliveredBy": [
-      {
-      "url": "https://www.w3.org/2011/rdf-wg/",
-      "shortname": "rdf"
-      }
-      ],
-      "versions": [
-      "json-ld-20140116",
-      "json-ld-20131105",
-      "json-ld-20130910",
-      "json-ld-20130411",
-      "json-ld-20120712"
-      ],
-      "id": "json-ld",
-      "date": "16 January 2014"
-      },      
-      "Kiefer-2014":{
-      "authors": [
-      "Kiefer, DS.",
-      "Chase, JC.",
-      "Love, GD.",
-      "Barrett, BP."
-      ],
-      "title":"The Overlap of Dietary Supplement and Pharmaceutical Use in the MIDUS National Study",
-      "publisher":"Evid Based Complement Alternat Med",
-      "date":"2014",
-      "href":"https://doi.org/10.1155/2014/823853"
-      }
-      ,
-      "martens-2011":{
-       "title": "MzML—a Community Standard for Mass Spectrometry Data.",
-       "authors":[
-          "Lennart Martens",
-         "Matthew Chambers",
-         "Marc Sturm",
-         "Darren Kessner",
-        "Fredrik Levander",
-        "Jim Shofstahl",
-       "Wilfred H. Tang"
-      ],
-      "publisher": "Molecular &amp; Cellular Proteomics",
-      "date": "2011",
-      "href": "https://doi.org/10.1074/mcp.R110.000133"}
-      ,
-      "ontobee":{
-      "title":"Ontobee",
-      "publisher":"OBO Foundry",
-      "date":"2019",
-      "href":"http://www.ontobee.org/"
-      },
-      "Posadzki-2013":{
-      "authors": [
-      "Posadzki, P.",
-      "Watson, L.",
-      "Ernst, E."
-      ],
-      "title":"Herb-drug interactions: an overview of systematic reviews",
-      "publisher":"Br J Clin Pharmacol",
-      "date":"2013",
-      "href":"https://doi.org/10.1111/j.1365-2125.2012.04350.x"
-      }
-      ,
-      "project-metadata-tools":{
-      "title": "Metadata Resources for Schema v1.1",
-      "publisher": "United States Government",
-      "date": "2019",
-      "href": "https://project-open-data.cio.gov/v1.1/metadata-resources/"}
-      ,
-      "prov-overview":{
-      "authors": [
-      "Paul Groth",
-      "Luc Moreau"
-      ],
-      "href": "https://www.w3.org/TR/prov-overview/",
-      "title": "PROV-Overview",
-      "status": "NOTE",
-      "publisher": "W3C",
-      "deliveredBy": [
-      {
-      "url": "https://www.w3.org/2011/prov/",
-      "shortname": "prov"
-      }
-      ],
-      "versions": [
-      "prov-overview-20130430",
-      "prov-overview-20130312",
-      "prov-overview-20121211"
-      ],
-      "id": "prov-overview",
-      "date": "30 April 2013"
-      },
-      "schema.org":{
-      "title": "Schema.org",
-      "publisher": "Schema.org",
-      "date": "2019",
-      "href": "https://schema.org/"}
-      ,   
-      "zenodo":{
-      "title": "Zenodo",
-      "publisher": "CERN Data Centre & Invenio",
-      "date": "2019",
-      "href": "https://zenodo.org/"}
-      ,
-      "Wilkinson-2016":{
-      "authors": [
-      "Wilkinson, MD.",
-      "Dumontier, M.",
-      "Aalbersberg, IJJ.",
-      "et al."
-      ],
-      "title":"The FAIR Guiding Principles for scientific data management and stewardship",
-      "publisher":"Sci Data",
-      "date":"2016",
-      "href":"https://doi.org/10.1038/sdata.2016.18"
-      }
-      
-      },
-      specStatus: "CG-DRAFT",
-      edDraftURI: "https://w3id.org/hclscg/npdi",
-      editors: [
-      {
-      name: "Richard D. Boyce",
-      url: "www.dbmi.pitt.edu/person/richard-boyce-phd",
-      company: "Department of Biomedical Informatics, University of Pittsburgh, USA"
-      },
-      {
-      name: "Serkan Ayvaz",
-      company: "Department of Software Engineering, Bahcesehir University, Istanbul, Turkey"
-      },
-      {
-      name: "Ratnesh Sahay",
-      company: "AstraZeneca, Cambridge, UK"
-      },    
-      {
-      name: "Michel Dumontier",
-      company: "Institute of Data Science, Maastricht University, Netherlands"
-      }
-      ],
-      authors: [
-      {
-      name: "Mary Paine",
-      company: "Washington State University"
-      },
-      {
-      name: "Bruce E. Pinkleton",
-      company: "Washington State University"
-      },
-      {
-      name: "Rebecca Cooney",
-      company: "Washington State University"
-      },
-      {
-      name: "Helenmary Sheridan",
-      company: "University of Pittsburgh"
-      },
-      {
-      name: "Melissa Anne Ratajeski",
-      company: "University of Pittsburgh"
-      },
-      {
-      name: "Caroline Birer",
-      company: "University of Pittsburgh"
-      },
-      {
-      name: "Austin Wiggins",
-      company: "University of Pittsburgh"
-      }
-      ],
-      github: "https://github.com/w3c/hcls-natural-product-drug-interaction-fair",
-      shortName: "NPDI-FAIR",
-      wg: "Semantic Web in Health Care and Life Sciences Community Group",
-      wgPublicList: "public-hclscg",
-      wgURI: "https://www.w3.org/community/hclscg/"
-      };
+        var respecConfig = {
+            localBiblio: {
+                "bioportal": {
+                    "title": "NCBO Bioportal",
+                    "publisher": "National Center for Biomedical Ontology",
+                    "date": "2019",
+                    "href": "https://bioportal.bioontology.org/"
+                },
+                "catalog-generator": {
+                    "title": "Project Open Data - Catalog Generator",
+                    "publisher": "United States Government ",
+                    "date": "April 2019",
+                    "href": "https://project-open-data.cio.gov/catalog-generator"
+                }
+                ,
+                "cedar": {
+                    "title": "CEDAR Overview",
+                    "publisher": "Center for Expanded Data Annotation and Retrieval (CEDAR)",
+                    "date": "April 2019",
+                    "href": "https://metadatacenter.org/"
+                }
+                ,
+                "datacite": {
+                    "title": "DataCite - Cite Your Data",
+                    "publisher": "DataCite ",
+                    "date": "April 2019",
+                    "href": "https://datacite.org/cite-your-data.html"
+                }
+                ,
+                "dataverse": {
+                    "title": "The Dataverse Project - Open source research data repository software",
+                    "publisher": "Dataverse Project",
+                    "date": "2019",
+                    "href": "https://dataverse.org/"
+                }
+                ,
+                "DATS": {
+                    "authors": [
+                        "Susanna-Assunta Sansone",
+                        "Alejandra Gonzalez-Beltran",
+                        "Philippe Rocca-Serra",
+                        "George Alter",
+                        "Jeffrey S. Grethe",
+                        "Hua Xu",
+                        "Ian M. Fore",
+                        "Jared Lyle",
+                        "Anupama E. Gururaj",
+                        "Xiaoling Chen",
+                        "Hyeon-eui Kim",
+                        "Nansu Zong",
+                        "Yueling Li",
+                        "Ruiling Liu",
+                        "I. Burak Ozyurt",
+                        "Lucila Ohno-Machado"
+                    ],
+                    "href": "https://www.nature.com/articles/sdata201759",
+                    "title": "DATS, the data tag suite to enable discoverability of datasets",
+                    "publisher": "Nature Scientific Data",
+                    "repository": "https://github.com/datatagsuite",
+                    "date": "6/6/2017"
+                }
+                ,
+                "dcat": {
+                    "authors": [
+
+                        "Alejandra Gonzalez Beltran",
+                        "David Browning",
+                        "Simon Cox",
+                        "Peter Winstanley"
+                    ],
+                    "href": "https://www.w3.org/TR/vocab-dcat-2/",
+                    "title": "Data Catalog Vocabulary (DCAT) - revised edition",
+                    "status": "WD",
+                    "publisher": "W3C",
+                    "edDraft": "https://w3c.github.io/dxwg/dcat/",
+                    "deliveredBy": [
+                        {
+                            "url": "https://www.w3.org/2017/dxwg/",
+                            "shortname": "dx"
+                        }
+                    ],
+                    "versions": [
+                        "vocab-dcat-2-20181016",
+                        "vocab-dcat-2-20180508"
+                    ],
+                    "repository": "https://github.com/w3c/dxwg",
+                    "id": "vocab-dcat-2",
+                    "date": "16 October 2018"
+                }
+                ,
+                "DIDEO-ontobee": {
+                    "title": "DIDEO",
+                    "publisher": "Ontobee",
+                    "date": "2018",
+                    "href": "http://www.ontobee.org/ontology/DIDEO"
+                }
+                ,
+                "DIDEO-published": {
+                    "authors": ["J Judkins", "J Tay-Sontheimer", "RD Boyce", "M Brochhausen."],
+                    "title": "Extending the DIDEO ontology to include entities from the natural product drug interaction domain of discourse.",
+                    "publisher": "J Biomed Semantics",
+                    "date": "May 9 2018",
+                    "href": "https://doi.org/10.1186/s13326-018-0183-z."
+                },
+                "dryad": {
+                    "title": "Dryad Digital Repository",
+                    "publisher": "Dryad",
+                    "date": "2019",
+                    "href": "https://datadryad.org/"
+                }
+                ,
+                "dcmi": {
+                    "authors": [
+                        "DCMI Usage Board"
+                    ],
+                    "href": "http://dublincore.org/documents/dcmi-terms/",
+                    "title": "DCMI Metadata Terms",
+                    "publisher": "DCMI",
+                    "status": "DCMI Recommendation",
+                    "versions": [
+                        "DCTERMS-20101011"
+                    ],
+                    "id": "DCTERMS",
+                    "date": "14 June 2012"
+                }
+                ,
+                "dwbp": {
+                    "editors": [
+                        "Lóscio, BF.",
+                        "Burle, C.",
+                        "Calegari, N."
+                    ],
+                    "title": "Data on the Web Best Practices",
+                    "publisher": "W3C",
+                    "date": "January 2017",
+                    "href": "https://www.w3.org/TR/dwbp"
+                }
+                ,
+                "figshare": {
+                    "title": "figshare",
+                    "publisher": "figshare community",
+                    "date": "2019",
+                    "href": "https://figshare.com/"
+                }
+                ,
+                "google-data-testing": {
+                    "title": "Google Structured Data Testing Tool",
+                    "publisher": "Google",
+                    "date": "2019",
+                    "href": "https://search.google.com/structured-data/testing-tool#"
+                }
+                ,
+                "google-data-search": {
+                    "title": "Google Dataset Search (beta)",
+                    "publisher": "Google",
+                    "date": "2019",
+                    "href": "https://toolbox.google.com/datasetsearch"
+                }
+                ,
+                "html-rdfa": {
+                    "authors": [
+                        "Manu Sporny"
+                    ],
+                    "href": "https://www.w3.org/TR/html-rdfa/",
+                    "title": "HTML+RDFa 1.1 - Second Edition",
+                    "status": "REC",
+                    "publisher": "W3C",
+                    "deliveredBy": [
+                        {
+                            "url": "https://www.w3.org/2010/02/rdfa/",
+                            "shortname": "rdfa"
+                        }
+                    ],
+                    "versions": [
+                        "html-rdfa-20150317",
+                        "html-rdfa-20141216",
+                        "html-rdfa-20130822",
+                        "html-rdfa-20130625",
+                        "html-rdfa-20130207",
+                        "html-rdfa-20121213",
+                        "html-rdfa-20120911",
+                        "html-rdfa-20120329",
+                        "html-rdfa-20110525",
+                        "html-rdfa-20110405",
+                        "html-rdfa-20110113",
+                        "html-rdfa-20101019",
+                        "html-rdfa-20100624",
+                        "html-rdfa-20100304",
+                        "html-rdfa-20091015"
+                    ],
+                    "id": "html-rdfa",
+                    "date": "17 March 2015"
+                },
+                "Hoffmann-2019": {
+                    "authors": [
+                        "Hoffmann, Nils",
+                        "Joel Rein",
+                        "Timo Sachsenberg",
+                        "Jürgen Hartler",
+                        "Kenneth Haug",
+                        "Gerhard Mayer",
+                        "Oliver Alka"
+                    ],
+                    "title": "MzTab-M: A Data Standard for Sharing Quantitative Results in Mass Spectrometry Metabolomics",
+                    "publisher": "Analytical Chemistry",
+                    "date": "2019",
+                    "href": "https://doi.org/10.1021/acs.analchem.8b04310"
+                }
+                ,
+                "DC11": {
+                    "href": "http://dublincore.org/documents/dces/",
+                    "title": "Dublin Core Metadata Element Set, Version 1.1",
+                    "publisher": "DCMI",
+                    "status": "DCMI Recommendation",
+                    "versions": [
+                        "DC11-20120614"
+                    ],
+                    "id": "DC11",
+                    "date": "14 June 2012"
+                },
+                "JSON-LD": {
+                    "authors": [
+                        "Manu Sporny",
+                        "Gregg Kellogg",
+                        "Markus Lanthaler"
+                    ],
+                    "href": "https://www.w3.org/TR/json-ld/",
+                    "title": "JSON-LD 1.0",
+                    "status": "REC",
+                    "publisher": "W3C",
+                    "deliveredBy": [
+                        {
+                            "url": "https://www.w3.org/2011/rdf-wg/",
+                            "shortname": "rdf"
+                        }
+                    ],
+                    "versions": [
+                        "json-ld-20140116",
+                        "json-ld-20131105",
+                        "json-ld-20130910",
+                        "json-ld-20130411",
+                        "json-ld-20120712"
+                    ],
+                    "id": "json-ld",
+                    "date": "16 January 2014"
+                },
+                "Kiefer-2014": {
+                    "authors": [
+                        "Kiefer, DS.",
+                        "Chase, JC.",
+                        "Love, GD.",
+                        "Barrett, BP."
+                    ],
+                    "title": "The Overlap of Dietary Supplement and Pharmaceutical Use in the MIDUS National Study",
+                    "publisher": "Evid Based Complement Alternat Med",
+                    "date": "2014",
+                    "href": "https://doi.org/10.1155/2014/823853"
+                }
+                ,
+                "martens-2011": {
+                    "title": "MzML—a Community Standard for Mass Spectrometry Data.",
+                    "authors": [
+                        "Lennart Martens",
+                        "Matthew Chambers",
+                        "Marc Sturm",
+                        "Darren Kessner",
+                        "Fredrik Levander",
+                        "Jim Shofstahl",
+                        "Wilfred H. Tang"
+                    ],
+                    "publisher": "Molecular &amp; Cellular Proteomics",
+                    "date": "2011",
+                    "href": "https://doi.org/10.1074/mcp.R110.000133"
+                },
+                "McAlpine-2019": {
+                    "authors": [
+                        "B. McAlpine, James",
+                        "Shao-Nong Chen",
+                        "Andrei Kutateladze",
+                        "John B. MacMillan",
+                        "Giovanni Appendino",
+                        "Andersson Barison",
+                        "Mehdi A. Beniddir"
+                    ],
+                    "title": "The Value of Universally Available Raw NMR Data for Transparency, Reproducibility, and Integrity in Natural Product Research",
+                    "publisher": "Natural Product Reports",
+                    "date": "2019",
+                    "href": "https://doi.org/10.1039/C7NP00064B"
+                }
+                ,
+                "ontobee": {
+                    "title": "Ontobee",
+                    "publisher": "OBO Foundry",
+                    "date": "2019",
+                    "href": "http://www.ontobee.org/"
+                },
+                "ontology-lookup": {
+                    "title": "Ontology Lookup Service",
+                    "publisher": "European Bioinformatics Institute",
+                    "date": "2019",
+                    "href": "https://www.ebi.ac.uk/ols/index"
+                },
+                "Orchard-2004": {
+                    "authors": [
+                        "Orchard, Sandra",
+                        "Chris Taylor",
+                        "Henning Hermjakob",
+                        "Weimin Zhu",
+                        "Randall Julian",
+                        "Rolf Apweiler"
+                    ],
+                    "title": "Current Status of Proteomic Standards Development.",
+                    "publisher": "Expert Review of Proteomics",
+                    "date": "2004",
+                    "href": "https://doi.org/10.1586/14789450.1.2.179"
+                },
+                "Pedrioli-2004": {
+                    "authors":[
+                        "Pedrioli, Patrick G. A.",
+                        "Jimmy K. Eng",
+                        "Robert Hubley" ,
+                        "Mathijs Vogelzang",
+                        "Eric W.",
+                        "Deutsch, Brian Raught",
+                        "Brian Pratt"
+                    ],
+                    "title": "A Common Open Representation of Mass Spectrometry Data and Its Application to Proteomics Research.",
+                    "publisher": "Nature Biotechnology",
+                    "date": "2004",
+                    "href": "https://doi.org/10.1038/nbt1031"
+                }
+                ,
+                "Posadzki-2013": {
+                    "authors": [
+                        "Posadzki, P.",
+                        "Watson, L.",
+                        "Ernst, E."
+                    ],
+                    "title": "Herb-drug interactions: an overview of systematic reviews",
+                    "publisher": "Br J Clin Pharmacol",
+                    "date": "2013",
+                    "href": "https://doi.org/10.1111/j.1365-2125.2012.04350.x"
+                }
+                ,
+                "project-metadata-tools": {
+                    "title": "Metadata Resources for Schema v1.1",
+                    "publisher": "United States Government",
+                    "date": "2019",
+                    "href": "https://project-open-data.cio.gov/v1.1/metadata-resources/"
+                }
+                ,
+                "prov-overview": {
+                    "authors": [
+                        "Paul Groth",
+                        "Luc Moreau"
+                    ],
+                    "href": "https://www.w3.org/TR/prov-overview/",
+                    "title": "PROV-Overview",
+                    "status": "NOTE",
+                    "publisher": "W3C",
+                    "deliveredBy": [
+                        {
+                            "url": "https://www.w3.org/2011/prov/",
+                            "shortname": "prov"
+                        }
+                    ],
+                    "versions": [
+                        "prov-overview-20130430",
+                        "prov-overview-20130312",
+                        "prov-overview-20121211"
+                    ],
+                    "id": "prov-overview",
+                    "date": "30 April 2013"
+                },
+                "Salek-2013": {
+                    "authors": [
+                        "Salek, Reza M",
+                        "Christoph Steinbeck",
+                        "Mark R Viant",
+                        "Royston Goodacre",
+                        "Warwick B Dunn"
+                    ],
+                    "title": "The Role of Reporting Standards for Metabolite Annotation and Identificationn in Metabolomic Studies.",
+                    "publisher": "GigaScience",
+                    "date": "2013",
+                    "href": "https://doi.org/10.1186/2047-217X-2-13"
+                },
+
+                "schema.org": {
+                    "title": "Schema.org",
+                    "publisher": "Schema.org",
+                    "date": "2019",
+                    "href": "https://schema.org/"
+                }
+                ,
+                "Schober-2018": {
+                    "authors": [
+                        "Schober, Daniel",
+                        "Daniel Jacob",
+                        "Michael Wilson",
+                        "Joseph A. Cruz",
+                        "Ana Marcu",
+                        "Jason R. Grant",
+                        "Annick Moing"
+                    ],
+                    "title": "NmrML: A Community Supported Open Data Standard for the Description, Storage, and Exchange of NMR Data.",
+                    "publisher": "Analytical Chemistry",
+                    "date": "2018",
+                    "href": "https://doi.org/10.1021/acs.analchem.7b02795"
+                },
+                "zenodo": {
+                    "title": "Zenodo",
+                    "publisher": "CERN Data Centre & Invenio",
+                    "date": "2019",
+                    "href": "https://zenodo.org/"
+                }
+                ,
+                "Wilkinson-2016": {
+                    "authors": [
+                        "Wilkinson, MD.",
+                        "Dumontier, M.",
+                        "Aalbersberg, IJJ.",
+                        "et al."
+                    ],
+                    "title": "The FAIR Guiding Principles for scientific data management and stewardship",
+                    "publisher": "Sci Data",
+                    "date": "2016",
+                    "href": "https://doi.org/10.1038/sdata.2016.18"
+                }
+
+            },
+            specStatus: "CG-DRAFT",
+            edDraftURI: "https://w3id.org/hclscg/npdi",
+            editors: [
+                {
+                    name: "Richard D. Boyce",
+                    url: "www.dbmi.pitt.edu/person/richard-boyce-phd",
+                    company: "Department of Biomedical Informatics, University of Pittsburgh, USA"
+                },
+                {
+                    name: "Serkan Ayvaz",
+                    company: "Department of Software Engineering, Bahcesehir University, Istanbul, Turkey"
+                },
+                {
+                    name: "Ratnesh Sahay",
+                    company: "AstraZeneca, Cambridge, UK"
+                },
+                {
+                    name: "Michel Dumontier",
+                    company: "Institute of Data Science, Maastricht University, Netherlands"
+                }
+            ],
+            authors: [
+                {
+                    name: "Mary Paine",
+                    company: "Washington State University"
+                },
+                {
+                    name: "Bruce E. Pinkleton",
+                    company: "Washington State University"
+                },
+                {
+                    name: "Rebecca Cooney",
+                    company: "Washington State University"
+                },
+                {
+                    name: "Helenmary Sheridan",
+                    company: "University of Pittsburgh"
+                },
+                {
+                    name: "Melissa Anne Ratajeski",
+                    company: "University of Pittsburgh"
+                },
+                {
+                    name: "Caroline Birer",
+                    company: "University of Pittsburgh"
+                },
+                {
+                    name: "Austin Wiggins",
+                    company: "University of Pittsburgh"
+                }
+            ],
+            github: "https://github.com/w3c/hcls-natural-product-drug-interaction-fair",
+            shortName: "NPDI-FAIR",
+            wg: "Semantic Web in Health Care and Life Sciences Community Group",
+            wgPublicList: "public-hclscg",
+            wgURI: "https://www.w3.org/community/hclscg/"
+        };
     </script>
     <style>
-      body {text-wrap: normal}
-      table, th, td{border: 1px solid black;
-      margin: 25px
-      }
-      th, td {padding: 10px}
+        body {
+            text-wrap: normal
+        }
 
-      /* Styles for the BPs themsevles */
+        table, th, td {
+            border: 1px solid black;
+            margin: 25px
+        }
 
-      #tempPractice {
-      padding-left: 1em;
-      background-color: #FCFAEE; 
-      border: thin solid #CCC; 
-      border-radius: 10px;
-      margin-bottom: 1.5em;
-      }
-      
-      .practicelab {
-      position: relative;
-      font-weight: bold;
-      }
-      
-      #tempPractice .tempPracticelab {
-      background-color: #dfffff;
-      position: relative;
-      top: -1.5em;
-      font-weight: bold;
-      }
+        th, td {
+            padding: 10px
+        }
 
-      .practice p.practicedesc,
-      #tempPractice p.tempPracticedesc {
-      font-style: italic;
-      border-bottom: thin solid black;
-      position: relative;
-      }
-      
-      .subhead {
-      font-weight: bold;
-      margin-top: 1em;
-      margin-left: 4px;
-      }
+        /* Styles for the BPs themsevles */
 
-      .benefits .stamp {
-      height: 52px;
-      width: 52px;
-      margin-right: 4px;
-      margin-bottom: 4px;
-      }
+        #tempPractice {
+            padding-left: 1em;
+            background-color: #FCFAEE;
+            border: thin solid #CCC;
+            border-radius: 10px;
+            margin-bottom: 1.5em;
+        }
 
-      .benefits .stamp-template {
-      height: 82px;
-      width: 82px;
-      margin-right: 4px;
-      margin-bottom: 4px;
-      }
+        .practicelab {
+            position: relative;
+            font-weight: bold;
+        }
 
-      .practice dl dt #tempPractice dl dt {
-      font-weight: normal;
-      }
+        #tempPractice .tempPracticelab {
+            background-color: #dfffff;
+            position: relative;
+            top: -1.5em;
+            font-weight: bold;
+        }
 
-      ul.benefitsList li.icon {
-      display: inline;
-      list-style-type: none;
-      }
+        .practice p.practicedesc,
+        #tempPractice p.tempPracticedesc {
+            font-style: italic;
+            border-bottom: thin solid black;
+            position: relative;
+        }
 
-      
-      
-      .hidden {
-      display: none
-      }
+        .subhead {
+            font-weight: bold;
+            margin-top: 1em;
+            margin-left: 4px;
+        }
 
-      ol.recommendationsList {
-      padding: 0;
-      margin: 0;
-      counter-reset: item;
-      }
+        .benefits .stamp {
+            height: 52px;
+            width: 52px;
+            margin-right: 4px;
+            margin-bottom: 4px;
+        }
 
-      ol.recommendationsList li.rec {
-      display: block;
-      }
-      
-      ol.recommendationsList li.rec::before {
-      display: inline-block;
-      content: "Recommendation " counter(item) ":";
-      counter-increment: item;
-      }
+        .benefits .stamp-template {
+            height: 82px;
+            width: 82px;
+            margin-right: 4px;
+            margin-bottom: 4px;
+        }
 
-      td.benefitsList {
-      border:none;
-      valign:middle;
-      }
+        .practice dl dt #tempPractice dl dt {
+            font-weight: normal;
+        }
 
-      td.benefitsList img {
-      border:none;
-      padding: 0;
-      margin-right: 1em;
-      max-width: 30px;
-      max-height: 30px;
-      }
+        ul.benefitsList li.icon {
+            display: inline;
+            list-style-type: none;
+        }
 
-      td.benefitsList img.findabilityIcon,
-      td.benefitsList img.accessIcon,
-      td.benefitsList img.interoperabilityIcon,
-      td.benefitsList img.reuseIcon {
-      border:none;
-      max-width: 35px;
-      }
-      
-      ul.benefitsList li.icon img {
-      padding: 0;
-      margin-right: 1em;
-      max-width: 60px;
-      max-height: 70px;
-      }
 
-      ul.benefitsList li.icon img.findabilityIcon,
-      ul.benefitsList li.icon img.accessIcon,
-      ul.benefitsList li.icon img.interoperabilityIcon,
-      ul.benefitsList li.icon img.reuseIcon {
-      max-width: 80px;
-      }
+        .hidden {
+            display: none
+        }
 
-      ul.benefitsList li.icon img.findabilityIcon,
-      ul.benefitsList li.icon img.accessIcon,
-      ul.benefitsList li.icon img.interoperabilityIcon,
-      ul.benefitsList li.icon img.reuseIcon {
-      max-width: 73px;
-      }
+        ol.recommendationsList {
+            padding: 0;
+            margin: 0;
+            counter-reset: item;
+        }
+
+        ol.recommendationsList li.rec {
+            display: block;
+        }
+
+        ol.recommendationsList li.rec::before {
+            display: inline-block;
+            content: "Recommendation " counter(item) ":";
+            counter-increment: item;
+        }
+
+        td.benefitsList {
+            border: none;
+            valign: middle;
+        }
+
+        td.benefitsList img {
+            border: none;
+            padding: 0;
+            margin-right: 1em;
+            max-width: 30px;
+            max-height: 30px;
+        }
+
+        td.benefitsList img.findabilityIcon,
+        td.benefitsList img.accessIcon,
+        td.benefitsList img.interoperabilityIcon,
+        td.benefitsList img.reuseIcon {
+            border: none;
+            max-width: 35px;
+        }
+
+        ul.benefitsList li.icon img {
+            padding: 0;
+            margin-right: 1em;
+            max-width: 60px;
+            max-height: 70px;
+        }
+
+        ul.benefitsList li.icon img.findabilityIcon,
+        ul.benefitsList li.icon img.accessIcon,
+        ul.benefitsList li.icon img.interoperabilityIcon,
+        ul.benefitsList li.icon img.reuseIcon {
+            max-width: 80px;
+        }
+
+        ul.benefitsList li.icon img.findabilityIcon,
+        ul.benefitsList li.icon img.accessIcon,
+        ul.benefitsList li.icon img.interoperabilityIcon,
+        ul.benefitsList li.icon img.reuseIcon {
+            max-width: 73px;
+        }
     </style>
-  </head>
-  <body>
-    <section id='abstract' class='introductory'>
-      <p>
-	The purpose of this Community Group Report is to 
-      </p>
-    </section>
-    <section id='sotd'>
-      This draft is currently open for editing suggestions by all interested stakeholders.
-</p>
-<p>
-  This document is governed by the <a href="https://www.w3.org/community/reports/reqs/">W3C  requirements of the Community and Business Group Process related to deliverables</a>.
-</p>
+</head>
+<body>
+<section id='abstract' class='introductory'>
+    <p>
+        The purpose of this Community Group Report is to
+    </p>
+</section>
+<section id='sotd'>
+    This draft is currently open for editing suggestions by all interested stakeholders.
+    </p>
+    <p>
+        This document is governed by the <a href="https://www.w3.org/community/reports/reqs/">W3C requirements of the
+        Community and Business Group Process related to deliverables</a>.
+    </p>
 </section>
 <section class='informative'>
-  <h2>Introduction</h2>
-  <p>
-    Concomitant use of therapeutic drugs and natural products, including vitamins, minerals, herbal medicinal products, and other botanicals, is a frequent occurrence. One study found that approximately 50% of Americans in their midlife were exposed to prescription drugs simultaneously with an dietary supplements, many of which were natural products [[Kiefer-2014]]. Concomitant exposure raises concerns of possible natural product-drug interactions (NPDIs) leading to patient harm. Potential adverse outcomes of NPDIs include transplant rejection, cardiovascular collapse, renal and liver toxicity, and death [[Posadzki-2013]]. A review identified 81 NPDIs between 35 NPs and 31 drug classes [[Wilkinson-2016]]. 
-  </p>
-  <p>
-    Research on NPDIs includes studies that characterize natural product chemical constituents, elucidate pharmacologic mechanisms, and identify potential clinical impact of NPDI exposure. The different kinds of datasets that arise from these various kinds of studies range from mass spectrometric to in vitro and in vivo pharmacokinetics. The multidisciplinary nature of NPDI research means that there is a large variety of approaches archiving, sharing, and describing the datasets (i.e., metadata).
-  </p>
-  <p>
-    In the face of this complexity, there is a growing recognition by both researchers and agencies that fund research that NPDI study datasets should be more findable, accessible, interoperable, and reusable (FAIR). This report proposes a set of recommended approaches to help NPDI researchers make their data more FAIR. After clarifying the intended audience, scope, and context, this report provides several recommendations organized into general and research-specific categories. Busy researchers can jump to <a href="#rec-summary"></a> to obtain a quick overview of the recommendations and follow links to specific FAIR practices. 
-  </p>
-  <p>
-  </p>
-</section>
-
-<section class='informative'>
-  <h2>Audience</h2>
-  <p>
-    This report is written for use by anyone who generates NPDI research data. These include, but are not limited to, analytical chemists, clinical pharmacologists, pharmacists,  and drug-compendium editors. Other natural product stakeholders might also benefit from the information in this report including funding agencies that support NPDI research, biomedical research librarians tasked with searching and/or indexing NPDI datasets, and data scientists working on natural product related analyses.
-  </p>
-</section>
-
-<section class='informative'>
-  <h2>Scope</h2>
-  <p>
-    The following NPDI data are within the scope of this report:
-  </p>
-  <p>
-    <i>Chemical analytical:</i> Data derived from assays that identify and quantify the chemical constituents present in natural products.
-  </p>
-  <p>
-    <i>Chemical metabolomics:</i> Data derived from assays that assess of similarity and differences between natural products based on chemical constituents.
-  </p>
-  <p>
-    <i>In vitro:</i> Data derived from in vitro systems include parameters describing natural product binding (fu plasma, fu mic), metabolism and transport (Km, Vmax), inhibition potency (IC50, Ki), and induction potential (EC50, Emax).
-  </p>
-  <p>
-    <i>IVIVE:</i> in vitro to in vivo extrapolation approaches encompass numerous mathematical models to predict the magnitude of natural product-drug interactions. Mathematical models include static interaction models, mechanistic static models, and fully mechanistic physiologically-based pharmacokinetic interaction models.
-  </p>
-  <p>
-    <i>Clinical:</i> Appropriately designed clinical pharmacokinetic interaction studies where the natural product is the precipitant and a drug (or drugs) is the object can provide a definitive assessment of interaction risk. Clinical data include pharmacokinetic outcomes (AUC, Cmax, Tmax, t1/2) describing object drug disposition in the absence and presence of the precipitating natural product.
-  </p>
-
-  <div class="issue" data-number="1"></div>
+    <h2>Introduction</h2>
+    <p>
+        Concomitant use of therapeutic drugs and natural products, including vitamins, minerals, herbal medicinal
+        products, and other botanicals, is a frequent occurrence. One study found that approximately 50% of Americans in
+        their midlife were exposed to prescription drugs simultaneously with an dietary supplements, many of which were
+        natural products [[Kiefer-2014]]. Concomitant exposure raises concerns of possible natural product-drug
+        interactions (NPDIs) leading to patient harm. Potential adverse outcomes of NPDIs include transplant rejection,
+        cardiovascular collapse, renal and liver toxicity, and death [[Posadzki-2013]]. A review identified 81 NPDIs
+        between 35 NPs and 31 drug classes [[Wilkinson-2016]].
+    </p>
+    <p>
+        Research on NPDIs includes studies that characterize natural product chemical constituents, elucidate
+        pharmacologic mechanisms, and identify potential clinical impact of NPDI exposure. The different kinds of
+        datasets that arise from these various kinds of studies range from mass spectrometric to in vitro and in vivo
+        pharmacokinetics. The multidisciplinary nature of NPDI research means that there is a large variety of
+        approaches archiving, sharing, and describing the datasets (i.e., metadata).
+    </p>
+    <p>
+        In the face of this complexity, there is a growing recognition by both researchers and agencies that fund
+        research that NPDI study datasets should be more findable, accessible, interoperable, and reusable (FAIR). This
+        report proposes a set of recommended approaches to help NPDI researchers make their data more FAIR. After
+        clarifying the intended audience, scope, and context, this report provides several recommendations organized
+        into general and research-specific categories. Busy researchers can jump to <a href="#rec-summary"></a> to
+        obtain a quick overview of the recommendations and follow links to specific FAIR practices.
+    </p>
+    <p>
+    </p>
 </section>
 
 <section class='informative'>
-  <h2>Context</h2>
-  <p>
-    <a href="#Fig-context"></a> provides an overview of the context for this report. The contributors to this report have considered both the types of data and the data management workflows specific to chemistry and pharmacology researchers. They then reviewed journal articles, white papers, and other types of reports that make recommendations on how to make biomedical datasets more FAIR. They also reviewed specific requirements related to FAIR that are emerging from either organizations that fund NPDI research or journals that publish the NPDI studies. This report makes the recommendations and requirements from these sources more accessible to researchers who study natural product chemistry and NPDI pharmacology. It  distinguishes recommendations that apply generally to all types of NPDI research from those that are specific to natural product chemistry and NPDI pharmacology.
-  </p>
-
-  <figure id="Fig-context">
-    <img src="W3C-Images/context-for-recommendations.jpg"
-	 width"1152" height="864">
-    <figcaption>The context for this report on making natural product – drug interaction study data findable, accessible, interoperable and reusable (FAIR). <i>TODO: Cite the specific reports and guidances that went into the recommendations. Then explain the sub-figures briefly and reference <a href="#rec-summary"></a> </i>  </figcaption>
-  </figure>
+    <h2>Audience</h2>
+    <p>
+        This report is written for use by anyone who generates NPDI research data. These include, but are not limited
+        to, analytical chemists, clinical pharmacologists, pharmacists, and drug-compendium editors. Other natural
+        product stakeholders might also benefit from the information in this report including funding agencies that
+        support NPDI research, biomedical research librarians tasked with searching and/or indexing NPDI datasets, and
+        data scientists working on natural product related analyses.
+    </p>
 </section>
 
 <section class='informative'>
-  <h2>Namespaces</h2>
-  <div class="issue" data-number="2"></div>
-</section>
-
-<section class='informative'>
-  <h2>Recommendation Template</h2>
-  <p>
-    In this paper, all recommend approaches are provided using the template below. This template is similar to the template used in the World Wide Web Consortium Data on the Web Best Practices Recommendation [[dwbp]].
-  </p>
-  <div id="tempPractice">
-    <p><span id="template" class="tempPracticelab">Recommendation Template</span></p>
-    <p class="tempPracticedesc">Short description of the recommendation</p>
-
-    <h4 class="subhead" id="why">Why</h4>
-    <p>This section answers two crucial questions:</p>
-    <ul>
-      <li>Why this is specifically relevant to making NPDI data FAIR? </li>
-      <li>How does accomplish the goal of making NPDI data FAIR? </li>
-    </ul>
-    <p>A short description of the problem addressed by the recommended approach is also provided. </p>
-
-    <h4 class="subhead" id="intended-outcome" resource="#intended-outcome">Intended Outcome</h4>
-    <p>The benefits for NPDI researchers and the research community are expected if researchers follow the recommended approach. A recommendation can yield one or more benefits.
-      <ul class="benefitsList">
-	<!-- This text list is replaced by the icons by scripting -->
-	<li class="hidden">Findability</li>
-	<li class="hidden">Access</li>
-	<li class="hidden">Interoperability</li>
-	<li class="hidden">Reuse</li>
-	<li class="icon"><img src="W3C-Images/findability.svg" alt="Findability" class="benefitIcon findabilityIcon"></li>
-	<li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
-	<li class="icon"><img src="W3C-Images/interoperability.svg" alt="Interoperability" class="benefitIcon interoperabilityIcon"></li>
-	<li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
-      </ul>
+    <h2>Scope</h2>
+    <p>
+        The following NPDI data are within the scope of this report:
+    </p>
+    <p>
+        <i>Chemical analytical:</i> Data derived from assays that identify and quantify the chemical constituents
+        present in natural products.
+    </p>
+    <p>
+        <i>Chemical metabolomics:</i> Data derived from assays that assess of similarity and differences between natural
+        products based on chemical constituents.
+    </p>
+    <p>
+        <i>In vitro:</i> Data derived from in vitro systems include parameters describing natural product binding (fu
+        plasma, fu mic), metabolism and transport (Km, Vmax), inhibition potency (IC50, Ki), and induction potential
+        (EC50, Emax).
+    </p>
+    <p>
+        <i>IVIVE:</i> in vitro to in vivo extrapolation approaches encompass numerous mathematical models to predict the
+        magnitude of natural product-drug interactions. Mathematical models include static interaction models,
+        mechanistic static models, and fully mechanistic physiologically-based pharmacokinetic interaction models.
+    </p>
+    <p>
+        <i>Clinical:</i> Appropriately designed clinical pharmacokinetic interaction studies where the natural product
+        is the precipitant and a drug (or drugs) is the object can provide a definitive assessment of interaction risk.
+        Clinical data include pharmacokinetic outcomes (AUC, Cmax, Tmax, t1/2) describing object drug disposition in the
+        absence and presence of the precipitating natural product.
     </p>
 
-    <h4 class="subhead" id="possible-approach-to-implementation" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
-    <p>A description of a possible implementation strategy based on the state-of-the art. </p>
+    <div class="issue" data-number="1"></div>
+</section>
 
-    <h4 class="subhead" id="how-to-test" resource="#how-to-test">How to Test</h4>
-    <p>Information on how to test that a researcher has followed the recommended approach. In many cases, testing can be automated.</p>
+<section class='informative'>
+    <h2>Context</h2>
+    <p>
+        <a href="#Fig-context"></a> provides an overview of the context for this report. The contributors to this report
+        have considered both the types of data and the data management workflows specific to chemistry and pharmacology
+        researchers. They then reviewed journal articles, white papers, and other types of reports that make
+        recommendations on how to make biomedical datasets more FAIR. They also reviewed specific requirements related
+        to FAIR that are emerging from either organizations that fund NPDI research or journals that publish the NPDI
+        studies. This report makes the recommendations and requirements from these sources more accessible to
+        researchers who study natural product chemistry and NPDI pharmacology. It distinguishes recommendations that
+        apply generally to all types of NPDI research from those that are specific to natural product chemistry and NPDI
+        pharmacology.
+    </p>
 
-    <h4 class="subhead" id="evidence" resource="#evidence">Evidence</h4>
-    <p>A short summary of evidence supporting the recommended approach.</p>
-  </div>    
+    <figure id="Fig-context">
+        <img src="W3C-Images/context-for-recommendations.jpg"
+             width"1152" height="864">
+        <figcaption>The context for this report on making natural product – drug interaction study data findable,
+            accessible, interoperable and reusable (FAIR). <i>TODO: Cite the specific reports and guidances that went
+                into the recommendations. Then explain the sub-figures briefly and reference <a href="#rec-summary"></a>
+            </i></figcaption>
+    </figure>
+</section>
+
+<section class='informative'>
+    <h2>Namespaces</h2>
+    <div class="issue" data-number="2"></div>
+</section>
+
+<section class='informative'>
+    <h2>Recommendation Template</h2>
+    <p>
+        In this paper, all recommend approaches are provided using the template below. This template is similar to the
+        template used in the World Wide Web Consortium Data on the Web Best Practices Recommendation [[dwbp]].
+    </p>
+    <div id="tempPractice">
+        <p><span id="template" class="tempPracticelab">Recommendation Template</span></p>
+        <p class="tempPracticedesc">Short description of the recommendation</p>
+
+        <h4 class="subhead" id="why">Why</h4>
+        <p>This section answers two crucial questions:</p>
+        <ul>
+            <li>Why this is specifically relevant to making NPDI data FAIR?</li>
+            <li>How does accomplish the goal of making NPDI data FAIR?</li>
+        </ul>
+        <p>A short description of the problem addressed by the recommended approach is also provided. </p>
+
+        <h4 class="subhead" id="intended-outcome" resource="#intended-outcome">Intended Outcome</h4>
+        <p>The benefits for NPDI researchers and the research community are expected if researchers follow the
+            recommended approach. A recommendation can yield one or more benefits.
+        <ul class="benefitsList">
+            <!-- This text list is replaced by the icons by scripting -->
+            <li class="hidden">Findability</li>
+            <li class="hidden">Access</li>
+            <li class="hidden">Interoperability</li>
+            <li class="hidden">Reuse</li>
+            <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability"
+                                  class="benefitIcon findabilityIcon"></li>
+            <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
+            <li class="icon"><img src="W3C-Images/interoperability.svg" alt="Interoperability"
+                                  class="benefitIcon interoperabilityIcon"></li>
+            <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
+        </ul>
+        </p>
+
+        <h4 class="subhead" id="possible-approach-to-implementation" resource="#possible-approach-to-implementation">
+            Possible Approach to Implementation</h4>
+        <p>A description of a possible implementation strategy based on the state-of-the art. </p>
+
+        <h4 class="subhead" id="how-to-test" resource="#how-to-test">How to Test</h4>
+        <p>Information on how to test that a researcher has followed the recommended approach. In many cases, testing
+            can be automated.</p>
+
+        <h4 class="subhead" id="evidence" resource="#evidence">Evidence</h4>
+        <p>A short summary of evidence supporting the recommended approach.</p>
+    </div>
 </section>
 
 <!-- The template for writing... -->
-    <!-- <section id="rec-deposit-metadata"> -->
-    <!--   <h3 class="hidden">...</h3> -->
-    <!--   <div class="practice"> -->
-    <!-- 	<p><span id="rec-lab-X" class="practicelab">...</span></p> -->
-    <!-- 	<p class="practicedesc">...</p> -->
+<!-- <section id="rec-deposit-metadata"> -->
+<!--   <h3 class="hidden">...</h3> -->
+<!--   <div class="practice"> -->
+<!-- 	<p><span id="rec-lab-X" class="practicelab">...</span></p> -->
+<!-- 	<p class="practicedesc">...</p> -->
 
-    <!-- 	<h4 class="subhead" id="why-X">Why</h4> -->
-    <!-- 	<p> -->
-    <!-- 	  ... -->
-    <!-- 	</p> -->
-    <!-- 	<h4 class="subhead" id="intended-outcome-X" resource="#intended-outcome">Intended Outcome</h4> -->
-    <!-- 	<p>...   -->
-    <!-- 	  <ul class="benefitsList"> -->
-    <!-- 	    <\!-- This text list is replaced by the icons by scripting -\-> -->
-    <!-- 	    <li class="hidden">Findability</li> -->
-    <!-- 	    <li class="hidden">Access</li> -->
-    <!-- 	    <li class="hidden">Interoperability</li> -->
-    <!-- 	    <li class="hidden">Reuse</li> -->
-    <!-- 	    <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability" class="benefitIcon findabilityIcon"></li> -->
-    <!-- 	    <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li> -->
-    <!-- 	    <li class="icon"><img src="W3C-Images/interoperability.svg" alt="Interoperability" class="benefitIcon interoperabilityIcon"></li> -->
-    <!-- 	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li> -->
-    <!-- 	  </ul> -->
-    <!-- 	</p> -->
+<!-- 	<h4 class="subhead" id="why-X">Why</h4> -->
+<!-- 	<p> -->
+<!-- 	  ... -->
+<!-- 	</p> -->
+<!-- 	<h4 class="subhead" id="intended-outcome-X" resource="#intended-outcome">Intended Outcome</h4> -->
+<!-- 	<p>...   -->
+<!-- 	  <ul class="benefitsList"> -->
+<!-- 	    <\!-- This text list is replaced by the icons by scripting -\-> -->
+<!-- 	    <li class="hidden">Findability</li> -->
+<!-- 	    <li class="hidden">Access</li> -->
+<!-- 	    <li class="hidden">Interoperability</li> -->
+<!-- 	    <li class="hidden">Reuse</li> -->
+<!-- 	    <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability" class="benefitIcon findabilityIcon"></li> -->
+<!-- 	    <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li> -->
+<!-- 	    <li class="icon"><img src="W3C-Images/interoperability.svg" alt="Interoperability" class="benefitIcon interoperabilityIcon"></li> -->
+<!-- 	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li> -->
+<!-- 	  </ul> -->
+<!-- 	</p> -->
 
-    <!-- 	<h4 class="subhead" id="possible-approach-to-implementation-X" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4> -->
-    <!-- 	<p> -->
-    <!-- 	  ... -->
-    <!-- 	</p> -->
+<!-- 	<h4 class="subhead" id="possible-approach-to-implementation-X" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4> -->
+<!-- 	<p> -->
+<!-- 	  ... -->
+<!-- 	</p> -->
 
-    <!-- 	<h4 class="subhead" id="how-to-test-X" resource="#how-to-test">How to Test</h4> -->
-    <!-- 	<p> -->
-    <!-- 	  ... -->
-    <!-- 	</p> -->
+<!-- 	<h4 class="subhead" id="how-to-test-X" resource="#how-to-test">How to Test</h4> -->
+<!-- 	<p> -->
+<!-- 	  ... -->
+<!-- 	</p> -->
 
-    <!-- 	<h4 class="subhead" id="evidence-X" resource="#evidence">Evidence</h4> -->
-    <!-- 	<div class="issue"> -->
-    <!-- 	  <p>A short summary of evidence supporting the recommended approach.</p> -->
-    <!-- 	</div> -->
-    <!--   </div>     -->
-    <!-- </section> -->
+<!-- 	<h4 class="subhead" id="evidence-X" resource="#evidence">Evidence</h4> -->
+<!-- 	<div class="issue"> -->
+<!-- 	  <p>A short summary of evidence supporting the recommended approach.</p> -->
+<!-- 	</div> -->
+<!--   </div>     -->
+<!-- </section> -->
 
-    
+
 <section id="rec-summary" class='normative'>
-  <h2>Recommendations Summary</h2>
+    <h2>Recommendations Summary</h2>
 
-  <!-- <table style="width:100%; border: none"> -->
-  <!--   <tr> -->
-  <!--     <b>Recommendations that apply generally to NPDI research </b> -->
-  <!--     <td style="border:none;"> -->
-  <!-- 	<ol class="recommendationsList"> -->
-  <!-- 	  <li class="rec"><a href="#rec-identifier"> Assign to a dataset a globally unique and persistent identifier</a></li> -->
-  <!-- 	  <li class="rec"><a href="#rec-use-the-identifier"> Refer to the globally unique and persistent identifier in relevant publications</a></li> -->
-  <!-- 	  <li class="rec"><a href="#rec-license"> Provide a license for data usage</a></li> -->
-  <!-- 	  <li class="rec"><a href="#rec-explicit-update-freq"> Make the update frequency of the data explicit</a></li> -->
-  <!-- 	  <li class="rec"><a href="#rec-deposit-metadata"> Deposit a description of the dataset (metadata) in a  public data repository</a></li> -->
-  <!-- 	  <li class="rec"><a href="#rec-metadata"> Use an existing machine readable metadata standard if publishing data on a lab website</a></li> -->
-  <!-- 	  <li class="rec"><a href="#rec-standard-vocabularies"> Strive to standardize all data elements</a></li> -->
-  <!-- 	  <li class="rec"><a href="#rec-feedback"> Give future users of the data a way to provide feedback</a></li> -->
-  <!-- 	  <li class="rec"><a href="#rec-downloadable"> Whenever possible, make the full dataset downloadable</a></li> -->
-  <!-- 	  <li class="rec"><a href="#rec-content-negotiation"> If your lab website host datasets, serve the data using content negotiation</a></li> -->
-  <!-- 	  <li class="rec"><a href="#rec-api"> If possible, provide access to data via a well-documented REST-full API</a></li> -->
+    <!-- <table style="width:100%; border: none"> -->
+    <!--   <tr> -->
+    <!--     <b>Recommendations that apply generally to NPDI research </b> -->
+    <!--     <td style="border:none;"> -->
+    <!-- 	<ol class="recommendationsList"> -->
+    <!-- 	  <li class="rec"><a href="#rec-identifier"> Assign to a dataset a globally unique and persistent identifier</a></li> -->
+    <!-- 	  <li class="rec"><a href="#rec-use-the-identifier"> Refer to the globally unique and persistent identifier in relevant publications</a></li> -->
+    <!-- 	  <li class="rec"><a href="#rec-license"> Provide a license for data usage</a></li> -->
+    <!-- 	  <li class="rec"><a href="#rec-explicit-update-freq"> Make the update frequency of the data explicit</a></li> -->
+    <!-- 	  <li class="rec"><a href="#rec-deposit-metadata"> Deposit a description of the dataset (metadata) in a  public data repository</a></li> -->
+    <!-- 	  <li class="rec"><a href="#rec-metadata"> Use an existing machine readable metadata standard if publishing data on a lab website</a></li> -->
+    <!-- 	  <li class="rec"><a href="#rec-standard-vocabularies"> Strive to standardize all data elements</a></li> -->
+    <!-- 	  <li class="rec"><a href="#rec-feedback"> Give future users of the data a way to provide feedback</a></li> -->
+    <!-- 	  <li class="rec"><a href="#rec-downloadable"> Whenever possible, make the full dataset downloadable</a></li> -->
+    <!-- 	  <li class="rec"><a href="#rec-content-negotiation"> If your lab website host datasets, serve the data using content negotiation</a></li> -->
+    <!-- 	  <li class="rec"><a href="#rec-api"> If possible, provide access to data via a well-documented REST-full API</a></li> -->
 
-  <!-- 	</ol> -->
-  <!--     </td> -->
-  <!--   </tr> -->
-  <!-- </table> -->
+    <!-- 	</ol> -->
+    <!--     </td> -->
+    <!--   </tr> -->
+    <!-- </table> -->
 
-  <table style="width:100%; border: none">
-    <tr style="border:none">
-      <b>Recommendations that apply generally to NPDI research </b>
-    </tr>
-    <tr>
-      <td class="benefitsList"><a href="#rec-identifier"> Assign to a dataset a globally unique and persistent identifier</a>
- 	<img src="W3C-Images/findability-small.svg" alt="Findability" class="benefitIcon findabilityIcon">
-	<img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
-      </td>
-    </tr>
+    <table style="width:100%; border: none">
+        <tr style="border:none">
+            <b>Recommendations that apply generally to NPDI research </b>
+        </tr>
+        <tr>
+            <td class="benefitsList"><a href="#rec-identifier"> Assign to a dataset a globally unique and persistent
+                identifier</a>
+                <img src="W3C-Images/findability-small.svg" alt="Findability" class="benefitIcon findabilityIcon">
+                <img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
+            </td>
+        </tr>
 
-    <tr>
-      <td class="benefitsList"><a href="#rec-use-the-identifier"> Refer to the globally unique and persistent identifier in relevant publications</a>
- 	<img src="W3C-Images/findability-small.svg" alt="Findability" class="benefitIcon findabilityIcon">
-	<img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
-      </td>
-    </tr>
+        <tr>
+            <td class="benefitsList"><a href="#rec-use-the-identifier"> Refer to the globally unique and persistent
+                identifier in relevant publications</a>
+                <img src="W3C-Images/findability-small.svg" alt="Findability" class="benefitIcon findabilityIcon">
+                <img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
+            </td>
+        </tr>
 
-    <tr>
-      <td class="benefitsList"><a href="#rec-license"> Provide a license for data usage</a>
-	<img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
-      </td>
-    </tr>
+        <tr>
+            <td class="benefitsList"><a href="#rec-license"> Provide a license for data usage</a>
+                <img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
+            </td>
+        </tr>
 
-    <tr>
-      <td class="benefitsList"><a href="#rec-explicit-update-freq"> Make the update frequency of the data explicit</a>
-	<img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
-      </td>
-    </tr>
+        <tr>
+            <td class="benefitsList"><a href="#rec-explicit-update-freq"> Make the update frequency of the data
+                explicit</a>
+                <img src="W3C-Images/access-small.svg" alt="Access" class="benefitIcon accessIcon">
+                <img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
+            </td>
+        </tr>
 
-    <tr>
-      <td class="benefitsList"><a href="#rec-deposit-metadata"> Deposit a description of the dataset (metadata) in a  public data repository</a> 
- 	<img src="W3C-Images/findability-small.svg" alt="Findability" class="benefitIcon findabilityIcon">
-	<img src="W3C-Images/access-small.svg" alt="Access" class="benefitIcon accessIcon">
-	<img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
-      </td>
-    </tr>
+        <tr>
+            <td class="benefitsList"><a href="#rec-deposit-metadata"> Deposit a description of the dataset (metadata) in
+                a public data repository</a>
+                <img src="W3C-Images/findability-small.svg" alt="Findability" class="benefitIcon findabilityIcon">
+                <img src="W3C-Images/access-small.svg" alt="Access" class="benefitIcon accessIcon">
+                <img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
+            </td>
+        </tr>
 
-    <tr>
-      <td class="benefitsList"><a href="#rec-metadata"> Use an existing machine readable metadata standard</a>
- 	<img src="W3C-Images/findability-small.svg" alt="Findability" class="benefitIcon findabilityIcon">
-	<img src="W3C-Images/access-small.svg" alt="Access" class="benefitIcon accessIcon">
-	<img src="W3C-Images/interoperability-small.svg" alt="Interoperability" class="benefitIcon interoperabilityIcon">
-	<img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
-      </td>
-    </tr>
+        <tr>
+            <td class="benefitsList"><a href="#rec-metadata"> Use an existing machine readable metadata standard</a>
+                <img src="W3C-Images/findability-small.svg" alt="Findability" class="benefitIcon findabilityIcon">
+                <img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
+            </td>
+        </tr>
 
-    <tr>
-      <td class="benefitsList"><a href="#rec-standard-vocabularies"> Strive to use standard data elements</a>
-	<img src="W3C-Images/interoperability-small.svg" alt="Interoperability" class="benefitIcon interoperabilityIcon">
-	<img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
-      </td>
-    </tr>
+        <tr>
+            <td class="benefitsList"><a href="#rec-standard-vocabularies"> Strive to use standard data elements</a>
+                <img src="W3C-Images/findability-small.svg" alt="Findability" class="benefitIcon findabilityIcon">
+                <img src="W3C-Images/interoperability-small.svg" alt="Interoperability"
+                     class="benefitIcon interoperabilityIcon">
+                <img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
+            </td>
+        </tr>
 
-    <tr>
-      <td class="benefitsList"><a href="#rec-feedback"> Give future users of the data a way to provide feedback</a>
-	<img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
-      </td>
-    </tr>
+        <tr>
+            <td class="benefitsList"><a href="#rec-feedback"> Give future users of the data a way to provide
+                feedback</a>
+                <img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
+            </td>
+        </tr>
 
-    <tr>
-      <td class="benefitsList"><a href="#rec-downloadable"> Whenever possible, make the full dataset downloadable</a> 
-	<img src="W3C-Images/access-small.svg" alt="Access" class="benefitIcon accessIcon">
-	<img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
-      </td>
-    </tr>
+        <tr>
+            <td class="benefitsList"><a href="#rec-downloadable"> Whenever possible, make the full dataset
+                downloadable</a>
+                <img src="W3C-Images/access-small.svg" alt="Access" class="benefitIcon accessIcon">
+                <img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
+            </td>
+        </tr>
 
-    <tr>
-      <td class="benefitsList"><a href="#rec-content-negotiation"> If your lab website host datasets, serve the data using content negotiation</a>
-	<img src="W3C-Images/access-small.svg" alt="Access" class="benefitIcon accessIcon">
-	<img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
-      </td>
-    </tr>
+        <tr>
+            <td class="benefitsList"><a href="#rec-content-negotiation"> If your lab website host datasets, serve the
+                data using content negotiation</a>
+                <img src="W3C-Images/access-small.svg" alt="Access" class="benefitIcon accessIcon">
+                <img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
+            </td>
+        </tr>
 
-    <tr>
-      <td class="benefitsList"><a href="#rec-api"> If possible, provide access to data via a well-documented REST-full API</a> 
-	<img src="W3C-Images/access-small.svg" alt="Access" class="benefitIcon accessIcon">
-	<img src="W3C-Images/interoperability-small.svg" alt="Interoperability" class="benefitIcon interoperabilityIcon">
-	<img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
-      </td>
-    </tr>
-    
-  </table>
+        <tr>
+            <td class="benefitsList"><a href="#rec-api"> If possible, provide access to data via a well-documented
+                REST-full API</a>
+                <img src="W3C-Images/findability-small.svg" alt="Findability" class="benefitIcon findabilityIcon">
+                <img src="W3C-Images/access-small.svg" alt="Access" class="benefitIcon accessIcon">
+                <img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
+            </td>
+        </tr>
 
-  <table style="width:100%; border: none">
-    <tr>
-      <b>Recommendations specific to natural product chemistry</b>
-    </tr>
-    
-    <tr>
-      <td class="benefitsList"><a href="#rec-open-raw-spectra"> Provide raw spectral using with an open file format</a>
-	<img src="W3C-Images/access-small.svg" alt="Access" class="benefitIcon accessIcon">
-	<img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
-      </td>      
-    </tr>
+    </table>
 
-    <tr>
-      <td class="benefitsList"><a href="#rec-standard-chem-results"> Publish NMR and MS results following standards</a>
-    	<img src="W3C-Images/access-small.svg" alt="Access" class="benefitIcon accessIcon">
-	<img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
-      </td>
-    </tr>
+    <table style="width:100%; border: none">
+        <tr>
+            <b>Recommendations specific to natural product chemistry</b>
+        </tr>
 
+        <tr>
+            <td class="benefitsList"><a href="#rec-open-raw-spectra"> Provide raw spectral using with an open file
+                format</a>
+                <img src="W3C-Images/access-small.svg" alt="Access" class="benefitIcon accessIcon">
+                <img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
+            </td>
+        </tr>
 
-    <tr>
-      <td class="benefitsList"><a href="#rec-standard-exp-metadata-chem"> Report experiment metadata along with the spectral raw data file</a>
-    	<img src="W3C-Images/findability-small.svg" alt="Findability" class="benefitIcon findabilityIcon">
-    	<img src="W3C-Images/interoperability-small.svg" alt="Interoperability" class="benefitIcon interoperabilityIcon">
-    	<img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
-      </td>
-    </tr>
+        <tr>
+            <td class="benefitsList"><a href="#rec-standard-chem-results"> Publish NMR and MS results following
+                standards</a>
+                <img src="W3C-Images/access-small.svg" alt="Access" class="benefitIcon accessIcon">
+                <img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
+            </td>
+        </tr>
 
 
-    <tr>
-      <td class="benefitsList"><a href="#rec-reproducible-workflow-chem"> Use reproducible NMR and MS analysis workflows</a>
-    	<img src="W3C-Images/access-small.svg" alt="Access" class="benefitIcon accessIcon">
-    	<img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
-      </td>
-    </tr>
-    
-  </table>
+        <tr>
+            <td class="benefitsList"><a href="#rec-standard-exp-metadata-chem"> Report experiment metadata along with
+                the spectral raw data file</a>
+                <img src="W3C-Images/findability-small.svg" alt="Findability" class="benefitIcon findabilityIcon">
+                <img src="W3C-Images/interoperability-small.svg" alt="Interoperability"
+                     class="benefitIcon interoperabilityIcon">
+                <img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
+            </td>
+        </tr>
 
-  <table style="width:100%; border: none">
-    <tr>
-      <b>Recommendations specific to NPDI pharmacology</b>
-      <td style="border:none;">
-	<ul style="list-style: none; padding: 0;  margin: 0;">
-	  <li><a href="#rec-identifier">Recommendation Y</a>: TODO:...</li>
-	</ul>
-      </td>      
-    </tr>
-  </table>
-  
+
+        <tr>
+            <td class="benefitsList"><a href="#rec-reproducible-workflow-chem"> Use reproducible NMR and MS analysis
+                workflows</a>
+                <img src="W3C-Images/access-small.svg" alt="Access" class="benefitIcon accessIcon">
+                <img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
+            </td>
+        </tr>
+
+    </table>
+
+    <table style="width:100%; border: none">
+        <tr>
+            <b>Recommendations specific to NPDI pharmacology</b>
+            <td style="border:none;">
+                <ul style="list-style: none; padding: 0;  margin: 0;">
+                    <li><a href="#rec-identifier">Recommendation Y</a>: TODO:...</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
 </section>
 
 
 <section id="general-recs" class="normative">
-  <h2>Recommendations that apply generally to NPDI research</h2>
+    <h2>Recommendations that apply generally to NPDI research</h2>
 
     <section id="rec-identifier">
-      <h3 class="hidden">Assign to a dataset a globally unique and persistent identifier</h3>
-      <div class="practice">
-	<p><span id="rec-lab-1" class="practicelab">Assign to a dataset a globally unique and persistent identifier</span></p>
-	<p class="practicedesc">NPDI researchers should assign to datasets generated by their research a globally unique and persistent identifier. If possible, the identifier should also be resolvable. </p>
-	
-	<h4 class="subhead" id="why-1">Why</h4>
-	<p>
-	  Researchers will more easily and reliably locate and cite NPDI datasets over a longer period of time than if no identifiers are assigned. When a dataset’s identifier is globally unique, references to the dataset are non-ambiguous. When the dataset’s identifier is persistent, the dataset is findable for a longer period of time than otherwise.
-	</p>
+        <h3 class="hidden">Assign to a dataset a globally unique and persistent identifier</h3>
+        <div class="practice">
+            <p><span id="rec-lab-1"
+                     class="practicelab">Assign to a dataset a globally unique and persistent identifier</span></p>
+            <p class="practicedesc">NPDI researchers should assign to datasets generated by their research a globally
+                unique and persistent identifier. If possible, the identifier should also be resolvable. </p>
 
-	<h4 class="subhead" id="intended-outcome-1" resource="#intended-outcome">Intended Outcome</h4>
-	<p>
-	  The NPDI research community stands to benefit  from the more rapid and non-ambiguous location of NPDI datasets over a longer period of time than if this recommendation is not followed.
-	  <ul class="benefitsList">
-	    <!-- This text list is replaced by the icons by scripting -->
-	    <li class="hidden">Findability</li>
-	    <li class="hidden">Reuse</li>
-	    <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability" class="benefitIcon findabilityIcon"></li>
-	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>	  
-	  </ul>
-	</p>
+            <h4 class="subhead" id="why-1">Why</h4>
+            <p>
+                Researchers will more easily and reliably locate and cite NPDI datasets over a longer period of time
+                than if no identifiers are assigned. When a dataset’s identifier is globally unique, references to the
+                dataset are non-ambiguous. When the dataset’s identifier is persistent, the dataset is findable for a
+                longer period of time than otherwise.
+            </p>
 
-	<h4 class="subhead" id="possible-approach-to-implementation-1" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
-	<p>
-	  There are many ways to create a globally unique and persistent identifiers including a Globally Unique Identifier (GUID) generator, a program that creates Uniform Resource Identifiers using a Uniform Resource Name (URN), a service that creates Persistent Uniform Resource Locators (PURL), or a service that creates Digital Object Identifiers (DOIs).
-	</p>
-	<p>
-	  If the researcher intends for the dataset identifier to also resolve to a location on the Internet, the researcher could obtain a DOI through an affiliate that works with DataCite.org such as services like Zenodo, Figshare, or Dryad. If the researcher works for an academic library system, the library might have a method to obtain DOIs. For various reasons, a DOI might not be the best solution for a given research dataset. Some NPDI researchers share data on their laboratory website that has a specific domain name. In these cases, it might be possible for the researcher to create globally unique and persistent identifiers by combining the domain name with a GUID, URN, or a globally unique identifier that they create.
-	</p>
+            <h4 class="subhead" id="intended-outcome-1" resource="#intended-outcome">Intended Outcome</h4>
+            <p>
+                The NPDI research community stands to benefit from the more rapid and non-ambiguous location of NPDI
+                datasets over a longer period of time than if this recommendation is not followed.
+            <ul class="benefitsList">
+                <!-- This text list is replaced by the icons by scripting -->
+                <li class="hidden">Findability</li>
+                <li class="hidden">Reuse</li>
+                <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability"
+                                      class="benefitIcon findabilityIcon"></li>
+                <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
+            </ul>
+            </p>
 
-	<h4 class="subhead" id="how-to-test-1" resource="#how-to-test">How to Test</h4>
-	<p>
-	  In this case, design leads to outcome. If the dataset identifiers are DOIs, GUID, URNs, or PURLs, then they automatically satisfy this recommendation. If not, look to see if the creator(s) of a NPDI dataset explicitly states that the identifiers were designed for persistence and global uniqueness.
-	</p>
+            <h4 class="subhead" id="possible-approach-to-implementation-1"
+                resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
+            <p>
+                There are many ways to create a globally unique and persistent identifiers including a Globally Unique
+                Identifier (GUID) generator, a program that creates Uniform Resource Identifiers using a Uniform
+                Resource Name (URN), a service that creates Persistent Uniform Resource Locators (PURL), or a service
+                that creates Digital Object Identifiers (DOIs).
+            </p>
+            <p>
+                If the researcher intends for the dataset identifier to also resolve to a location on the Internet, the
+                researcher could obtain a DOI through an affiliate that works with DataCite.org such as services like
+                Zenodo, Figshare, or Dryad. If the researcher works for an academic library system, the library might
+                have a method to obtain DOIs. For various reasons, a DOI might not be the best solution for a given
+                research dataset. Some NPDI researchers share data on their laboratory website that has a specific
+                domain name. In these cases, it might be possible for the researcher to create globally unique and
+                persistent identifiers by combining the domain name with a GUID, URN, or a globally unique identifier
+                that they create.
+            </p>
 
-	<h4 class="subhead" id="evidence-1" resource="#evidence">Evidence</h4>
-	  <p>TODO: Fang et al. proposed a systems pharmacology infrastructure to predict new drug targets and anticancer indications of natural products.....PMID: 28956927</p>
-      </div>
+            <h4 class="subhead" id="how-to-test-1" resource="#how-to-test">How to Test</h4>
+            <p>
+                In this case, design leads to outcome. If the dataset identifiers are DOIs, GUID, URNs, or PURLs, then
+                they automatically satisfy this recommendation. If not, look to see if the creator(s) of a NPDI dataset
+                explicitly states that the identifiers were designed for persistence and global uniqueness.
+            </p>
+
+            <h4 class="subhead" id="evidence-1" resource="#evidence">Evidence</h4>
+            <p>TODO: Fang et al. proposed a systems pharmacology infrastructure to predict new drug targets and
+                anticancer indications of natural products.....PMID: 28956927</p>
+        </div>
     </section>
 
 
     <section id="rec-use-the-identifier">
-      <h3 class="hidden">Refer to the globally unique and persistent identifier in relevant publications</h3>
-      <div class="practice">
-	<p><span id="rec-lab-2" class="practicelab">Refer to the globally unique and persistent identifier in  relevant publications</span></p>
-	<p class="practicedesc">NPDI researchers should include mention of the globally unique and persistent identifier assigned to a given dataset in all publications and reports based on the dataset.</p>
-	
-	<h4 class="subhead" id="why-2">Why</h4>
-	<p>
-	  Researchers will more easily and reliably locate and cite NPDI datasets over a longer period of time if it they know unequivocally what specific dataset a publication or report is based on. One of the main benefits from this practice is that some services that index the scientific literature will index mention of the identifier. This leads to the ability for researchers to locate publications related to a given dataset simply by searching with the identifier.
-	</p>
+        <h3 class="hidden">Refer to the globally unique and persistent identifier in relevant publications</h3>
+        <div class="practice">
+            <p><span id="rec-lab-2" class="practicelab">Refer to the globally unique and persistent identifier in  relevant publications</span>
+            </p>
+            <p class="practicedesc">NPDI researchers should include mention of the globally unique and persistent
+                identifier assigned to a given dataset in all publications and reports based on the dataset.</p>
 
-	<h4 class="subhead" id="intended-outcome-2" resource="#intended-outcome">Intended Outcome</h4>
-	<p>
-	  The NPDI research community stands to benefit from the more rapid and non-ambiguous location of NPDI datasets over a longer period of time than if this recommendation is not followed.
-	  <ul class="benefitsList">
-	    <!-- This text list is replaced by the icons by scripting -->
-	    <li class="hidden">Findability</li>
-	    <li class="hidden">Reuse</li>
-	    <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability" class="benefitIcon findabilityIcon"></li>
-	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>	  
-	  </ul>
-	</p>
+            <h4 class="subhead" id="why-2">Why</h4>
+            <p>
+                Researchers will more easily and reliably locate and cite NPDI datasets over a longer period of time if
+                it they know unequivocally what specific dataset a publication or report is based on. One of the main
+                benefits from this practice is that some services that index the scientific literature will index
+                mention of the identifier. This leads to the ability for researchers to locate publications related to a
+                given dataset simply by searching with the identifier.
+            </p>
 
-	<h4 class="subhead" id="possible-approach-to-implementation-2" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
-	<p>
-	  Once a globally unique and persistent identifier exists for given dataset (see <a href="#rec-identifier"></a>), researchers can write the identifier directly into an approprate section in the publication or report that they are authoring. The appropriate location for mention of the identifier depends on the nature of the publication and the relevant formatting requirements. In some cases, researchers can simply mention the identifer within the methods section. Other times, it might be more appropriate to use a data citation formatted according to the norms of the researcher's discipline.[[datacite]] Researchers should check the publisher's guideline for authors for specific data citation instructions. 
-	</p>
-	<h4 class="subhead" id="how-to-test-2" resource="#how-to-test">How to Test</h4>
-	<p>
-	  In this case, design leads to outcome. If all relevant publications mention the dataset identifier, then they automatically satisfy this recommendation.
-	</p>
+            <h4 class="subhead" id="intended-outcome-2" resource="#intended-outcome">Intended Outcome</h4>
+            <p>
+                The NPDI research community stands to benefit from the more rapid and non-ambiguous location of NPDI
+                datasets over a longer period of time than if this recommendation is not followed.
+            <ul class="benefitsList">
+                <!-- This text list is replaced by the icons by scripting -->
+                <li class="hidden">Findability</li>
+                <li class="hidden">Reuse</li>
+                <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability"
+                                      class="benefitIcon findabilityIcon"></li>
+                <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
+            </ul>
+            </p>
 
-	<h4 class="subhead" id="evidence-2" resource="#evidence">Evidence</h4>
-	  <p>TODO cite Force 11 and Research Resource Identifiers</p>
-      </div>
+            <h4 class="subhead" id="possible-approach-to-implementation-2"
+                resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
+            <p>
+                Once a globally unique and persistent identifier exists for given dataset (see <a
+                    href="#rec-identifier"></a>), researchers can write the identifier directly into an approprate
+                section in the publication or report that they are authoring. The appropriate location for mention of
+                the identifier depends on the nature of the publication and the relevant formatting requirements. In
+                some cases, researchers can simply mention the identifer within the methods section. Other times, it
+                might be more appropriate to use a data citation formatted according to the norms of the researcher's
+                discipline.[[datacite]] Researchers should check the publisher's guideline for authors for specific data
+                citation instructions.
+            </p>
+            <h4 class="subhead" id="how-to-test-2" resource="#how-to-test">How to Test</h4>
+            <p>
+                In this case, design leads to outcome. If all relevant publications mention the dataset identifier, then
+                they automatically satisfy this recommendation.
+            </p>
+
+            <h4 class="subhead" id="evidence-2" resource="#evidence">Evidence</h4>
+            <p>TODO cite Force 11 and Research Resource Identifiers</p>
+        </div>
     </section>
 
     <section id="rec-deposit-metadata">
-      <h3 class="hidden">Deposit a description of the dataset (metadata) in a  public data repository</h3>
-      <div class="practice">
-	<p><span id="rec-lab-3" class="practicelab">Deposit a description of the dataset (metadata) in a  public data repository</span></p>
-	<p class="practicedesc">NPDI researchers should deposit dataset metadata in a  public data repository that is indexed by major search engines.</p>
+        <h3 class="hidden">Deposit a description of the dataset (metadata) in a public data repository</h3>
+        <div class="practice">
+            <p><span id="rec-lab-3" class="practicelab">Deposit a description of the dataset (metadata) in a  public data repository</span>
+            </p>
+            <p class="practicedesc">NPDI researchers should deposit dataset metadata in a public data repository that is
+                indexed by major search engines.</p>
 
-	<h4 class="subhead" id="why-3">Why</h4>
-	<p>
-	  Dataset metadata informs other researchers about who created a given dataset, its purpose, when it was created, and how to access it [[dwbp]]. Depositing dataset metadata in publically availabe resource that is indexed by major search engines means that this information will be more easily found by other researchers. 
-	</p>
-	<h4 class="subhead" id="intended-outcome-3" resource="#intended-outcome">Intended Outcome</h4>
-	<p>Depositing dataset descriptions in public repositories is an important artifact to increase the findability, accessibility, and reuse of data generated by the NPDI research community.  
-	  <ul class="benefitsList">
-	    <!-- This text list is replaced by the icons by scripting -->
-	    <li class="hidden">Findability</li>
-	    <li class="hidden">Access</li>
-	    <li class="hidden">Reuse</li>
-	    <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability" class="benefitIcon findabilityIcon"></li>
-	    <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
-	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
-	  </ul>
-	</p>
+            <h4 class="subhead" id="why-3">Why</h4>
+            <p>
+                Dataset metadata informs other researchers about who created a given dataset, its purpose, when it was
+                created, and how to access it [[dwbp]]. Depositing dataset metadata in publically availabe resource that
+                is indexed by major search engines means that this information will be more easily found by other
+                researchers.
+            </p>
+            <h4 class="subhead" id="intended-outcome-3" resource="#intended-outcome">Intended Outcome</h4>
+            <p>Depositing dataset descriptions in public repositories is an important artifact to increase the
+                findability, accessibility, and reuse of data generated by the NPDI research community.
+            <ul class="benefitsList">
+                <!-- This text list is replaced by the icons by scripting -->
+                <li class="hidden">Findability</li>
+                <li class="hidden">Access</li>
+                <li class="hidden">Reuse</li>
+                <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability"
+                                      class="benefitIcon findabilityIcon"></li>
+                <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
+                <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
+            </ul>
+            </p>
 
-	<h4 class="subhead" id="possible-approach-to-implementation-3" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
-	<p>
-	  There are a number of repositories that a research could use to satisfy this recommendation including various Dataverse sites[[dataverse]], Zenodo[[zenodo]], Figshare[[figshare]], and Dryad[[dryad]]. A common feature of these repostories is that they ensure dataset descriptions are readible to both humans and computer programs such as web search crawlers. It is relatively common for a research lab to maintian a website that provides links to datasets created by lab members. A description of each dataset could be created and deposited in aforementioned repositories. Alternatively, the lab could write a human readable dataset description on in a location that is easy for website visitors to locate. However, this will not enable web search crawlers to index the metadata so that the datasets are more easily found via web search. To accomplish that, the website should provide the dataset description  in the HTML head of the website as machine readable metadata using a format such as JSON-LD [[JSON-LD]] or HTML+RDFa [[html-rdfa]]. Examples of both human and machine readable dataset metadata are available in the Metadata section of the <i>Data on the Web Best Practices</i> W3C Recommendation [[dwbp]].
-	</p>
+            <h4 class="subhead" id="possible-approach-to-implementation-3"
+                resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
+            <p>
+                There are a number of repositories that a research could use to satisfy this recommendation including
+                various Dataverse sites[[dataverse]], Zenodo[[zenodo]], Figshare[[figshare]], and Dryad[[dryad]]. A
+                common feature of these repostories is that they ensure dataset descriptions are readible to both humans
+                and computer programs such as web search crawlers. It is relatively common for a research lab to
+                maintian a website that provides links to datasets created by lab members. A description of each dataset
+                could be created and deposited in aforementioned repositories. Alternatively, the lab could write a
+                human readable dataset description on in a location that is easy for website visitors to locate.
+                However, this will not enable web search crawlers to index the metadata so that the datasets are more
+                easily found via web search. To accomplish that, the website should provide the dataset description in
+                the HTML head of the website as machine readable metadata using a format such as JSON-LD [[JSON-LD]] or
+                HTML+RDFa [[html-rdfa]]. Examples of both human and machine readable dataset metadata are available in
+                the Metadata section of the <i>Data on the Web Best Practices</i> W3C Recommendation [[dwbp]].
+            </p>
 
-	<h4 class="subhead" id="how-to-test-3" resource="#how-to-test">How to Test</h4>
-	<p>
-	  If the researcher deposits a dataset description in a searchable resource, then they automatically satisfy this recommendation.
-	</p>
+            <h4 class="subhead" id="how-to-test-3" resource="#how-to-test">How to Test</h4>
+            <p>
+                If the researcher deposits a dataset description in a searchable resource, then they automatically
+                satisfy this recommendation.
+            </p>
 
-	<h4 class="subhead" id="evidence-3" resource="#evidence">Evidence</h4>
-	  <p>TODO: A short summary of evidence supporting the recommended approach.</p>
-      </div>    
+            <h4 class="subhead" id="evidence-3" resource="#evidence">Evidence</h4>
+            <p>TODO: A short summary of evidence supporting the recommended approach.</p>
+        </div>
     </section>
 
     <section id="rec-metadata">
-      <h3 class="hidden">Use an existing machine readable metadata standard if publishing data on a lab website</h3>
-      <div class="practice">
-	<p><span id="rec-lab-4" class="practicelab">Use an existing machine readable metadata standard if publishing data on a lab website</span></p>
-	<p class="practicedesc">As <a href="#rec-deposit-metadata"></a> mentions, many labs distribute datasets from a website that they maintain. The machine readable metadata that researchers put on their website could be represented a number of different ways in JSON-LD or HTML+RDFa [[html-rdfa]]. However, researchers should use an established metadata standard such as such as Dublin Core, Metadata Initiative [[dcmi]], Schema.org [[schema.org]], or the Data Catalog Vocabulary [[dcat]].
-	</p>
+        <h3 class="hidden">Use an existing machine readable metadata standard if publishing data on a lab website</h3>
+        <div class="practice">
+            <p><span id="rec-lab-4" class="practicelab">Use an existing machine readable metadata standard if publishing data on a lab website</span>
+            </p>
+            <p class="practicedesc">As <a href="#rec-deposit-metadata"></a> mentions, many labs distribute datasets from
+                a website that they maintain. The machine readable metadata that researchers put on their website could
+                be represented a number of different ways in JSON-LD or HTML+RDFa [[html-rdfa]]. However, researchers
+                should use an established metadata standard such as such as Dublin Core, Metadata Initiative [[dcmi]],
+                Schema.org [[schema.org]], or the Data Catalog Vocabulary [[dcat]].
+            </p>
 
-	<h4 class="subhead" id="why-4">Why</h4>
-	<p>
-	  A dataset produced from any kind of NPDI study will be more easily found and reused by other researchers if important facts about the dataset are described using standardized metadata elements that make since for the domain. For example, Google's new Dataset Search indexes sites that prpvide metadata using Schema.org [[google-data-search]]. 
-	</p>
-	<h4 class="subhead" id="intended-outcome-4" resource="#intended-outcome">Intended Outcome</h4>
-	<p> Researchers should be able to find data on the lab website much more easily. The use of standards that are used by data search engines should increase the specificity of natural product-drug interaction search results. The metadata can provide clarity on data ownership and access rights that will help facilitate re-use.
-	  <ul class="benefitsList">
-	    <!-- This text list is replaced by the icons by scripting -->
-	    <li class="hidden">Findability</li>
-	    <li class="hidden">Reuse</li>
-	    <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability" class="benefitIcon findabilityIcon"></li>
-	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
-	  </ul>
-	</p>
+            <h4 class="subhead" id="why-4">Why</h4>
+            <p>
+                A dataset produced from any kind of NPDI study will be more easily found and reused by other researchers
+                if important facts about the dataset are described using standardized metadata elements that make since
+                for the domain. For example, Google's new Dataset Search indexes sites that prpvide metadata using
+                Schema.org [[google-data-search]].
+            </p>
+            <h4 class="subhead" id="intended-outcome-4" resource="#intended-outcome">Intended Outcome</h4>
+            <p> Researchers should be able to find data on the lab website much more easily. The use of standards that
+                are used by data search engines should increase the specificity of natural product-drug interaction
+                search results. The metadata can provide clarity on data ownership and access rights that will help
+                facilitate re-use.
+            <ul class="benefitsList">
+                <!-- This text list is replaced by the icons by scripting -->
+                <li class="hidden">Findability</li>
+                <li class="hidden">Reuse</li>
+                <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability"
+                                      class="benefitIcon findabilityIcon"></li>
+                <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
+            </ul>
+            </p>
 
-	<h4 class="subhead" id="possible-approach-to-implementation-4" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
-	<p>
-	  Established metadata standards include Dublin Core, Metadata Initiative [[dcmi]], Schema.org [[schema.org]], the Data Catalog Vocabulary [[dcat]], and others [[dwbp]]. Researchers with little programming experience can use tools such as Catalog Generator [[catalog-generator]] which can export standardized metadata based in information that a researcher enters into a web form or via uploading a spreadsheet. Other approaches include using the Center for Expanded Data Annotation and Retrieval (CEDAR) workbench [[cedar]] or the tools listed on the Project Open Data metadata resources site [[project-metadata-tools]]. In terms of content, at a minimum the researcher should provide the dataset name, identifier (see <a href="#rec-identifier"></a>), description, creator, date of last modification, date of publication (if applicable), and distribution formats (if applicable) as structured metadata. While many established metadata standards provide attributes for general use cases, they might not include attributes relevant to a given research domain. In such cases, the researcher may use custom metadata attributes that will be recognizable by research peers and appropriate to use cases relevant to the researchers scientific peers. 
-	</p>
+            <h4 class="subhead" id="possible-approach-to-implementation-4"
+                resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
+            <p>
+                Established metadata standards include Dublin Core, Metadata Initiative [[dcmi]], Schema.org
+                [[schema.org]], the Data Catalog Vocabulary [[dcat]], and others [[dwbp]]. Researchers with little
+                programming experience can use tools such as Catalog Generator [[catalog-generator]] which can export
+                standardized metadata based in information that a researcher enters into a web form or via uploading a
+                spreadsheet. Other approaches include using the Center for Expanded Data Annotation and Retrieval
+                (CEDAR) workbench [[cedar]] or the tools listed on the Project Open Data metadata resources site
+                [[project-metadata-tools]]. In terms of content, at a minimum the researcher should provide the dataset
+                name, identifier (see <a href="#rec-identifier"></a>), description, creator, date of last modification,
+                date of publication (if applicable), and distribution formats (if applicable) as structured metadata.
+                While many established metadata standards provide attributes for general use cases, they might not
+                include attributes relevant to a given research domain. In such cases, the researcher may use custom
+                metadata attributes that will be recognizable by research peers and appropriate to use cases relevant to
+                the researchers scientific peers.
+            </p>
 
-	<h4 class="subhead" id="how-to-test-4" resource="#how-to-test">How to Test</h4>
-	<p>
-	  Researchers can utilize Google's Structured Data Testing Tool [[google-data-testing]] to ensure that the metadata they create will be processed by Google properly. Researchers can copy and paste their  metadata into the tool's form or provide a URL to a website page that has their metadata in the head of the HTML document.
-	</p>
+            <h4 class="subhead" id="how-to-test-4" resource="#how-to-test">How to Test</h4>
+            <p>
+                Researchers can utilize Google's Structured Data Testing Tool [[google-data-testing]] to ensure that the
+                metadata they create will be processed by Google properly. Researchers can copy and paste their metadata
+                into the tool's form or provide a URL to a website page that has their metadata in the head of the HTML
+                document.
+            </p>
 
-	<h4 class="subhead" id="evidence-4" resource="#evidence">Evidence</h4>
-	<p>TODO: A short summary of evidence supporting the recommended approach.</p>	
-      </div>    
+            <h4 class="subhead" id="evidence-4" resource="#evidence">Evidence</h4>
+            <p>TODO: A short summary of evidence supporting the recommended approach.</p>
+        </div>
     </section>
 
     <section id="rec-downloadable">
-      <h3 class="hidden">Whenever possible, make the full dataset downloadable</h3>
-      <div class="practice">
-	<p><span id="rec-lab-5" class="practicelab">Whenever possible, make the full dataset downloadable</span></p>
-	<p class="practicedesc">Make the full dataset associated with your NPDI experiments downloadable to other interested researchers.</p>
+        <h3 class="hidden">Whenever possible, make the full dataset downloadable</h3>
+        <div class="practice">
+            <p><span id="rec-lab-5" class="practicelab">Whenever possible, make the full dataset downloadable</span></p>
+            <p class="practicedesc">Make the full dataset associated with your NPDI experiments downloadable to other
+                interested researchers.</p>
 
-	<h4 class="subhead" id="why-5">Why</h4>
-	<p>
-	  Sharing detailed research data is associated with increased citation rate (Piwowar, Day, and Fridsma 2007). Data sharing is being increasingly required by journals, as a solution to the “replication crisis” where, for exampe, natural product researchers re-isolate previously described molecules (Spicer and Steinbeck 2017).
-	</p>
-	<h4 class="subhead" id="intended-outcome-5" resource="#intended-outcome">Intended Outcome</h4>
-	<p>It helps advance science to have a straightforward access to data discussed in reports and journal articles. It simplifies referee work, makes is easier to compare multiple datasets, and improves data reuse. 
-	  <ul class="benefitsList">
-	    <!-- This text list is replaced by the icons by scripting -->
-	    <li class="hidden">Access</li>
-	    <li class="hidden">Reuse</li>
-	    <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
-	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
-	  </ul>
-	</p>
+            <h4 class="subhead" id="why-5">Why</h4>
+            <p>
+                Sharing detailed research data is associated with increased citation rate (Piwowar, Day, and Fridsma
+                2007). Data sharing is being increasingly required by journals, as a solution to the “replication
+                crisis” where, for exampe, natural product researchers re-isolate previously described molecules (Spicer
+                and Steinbeck 2017).
+            </p>
+            <h4 class="subhead" id="intended-outcome-5" resource="#intended-outcome">Intended Outcome</h4>
+            <p>It helps advance science to have a straightforward access to data discussed in reports and journal
+                articles. It simplifies referee work, makes is easier to compare multiple datasets, and improves data
+                reuse.
+            <ul class="benefitsList">
+                <!-- This text list is replaced by the icons by scripting -->
+                <li class="hidden">Access</li>
+                <li class="hidden">Reuse</li>
+                <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
+                <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
+            </ul>
+            </p>
 
-	<h4 class="subhead" id="possible-approach-to-implementation-5" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
-	<p>
-	  For proprietary datasets, which is often the case in NP research, it is recommended to provide at least part of it (Guha and Willighagen 2017) or/and to provide a description. There are numerous repositories, and researchers have to be careful about ones which are not maintained and/or don’t follow standards. Widely used repositories that follow good practices include Dataverse and Zenodo. For MS raw file, results and metadata, NPDI studies could use more specific repository like MetaboLights, which is completely based on open source technology, using open data formats and community based reviews (https://www.ebi.ac.uk/metabolights/). MetaboLights adheres to MSI standards for metadata reporting and uses the ISA-tab format for metadata. For NMR, the COSMOS initiative (Salek et al. 2015) is similar and could be use by NPDI researchers to upload and share their NMR data with the nmrML format. Some users will benefit for the simplicity of a single file while others will want to access only a part of the dataset. Email is very commonly used but does not qualify as making data <i>accessible</i> because it depends on the data owner pushing the data to the recipient.
-	</p>
+            <h4 class="subhead" id="possible-approach-to-implementation-5"
+                resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
+            <p>
+                For proprietary datasets, which is often the case in NP research, it is recommended to provide at least
+                part of it (Guha and Willighagen 2017) or/and to provide a description. There are numerous repositories,
+                and researchers have to be careful about ones which are not maintained and/or don’t follow standards.
+                Widely used repositories that follow good practices include Dataverse and Zenodo. For MS raw file,
+                results and metadata, NPDI studies could use more specific repository like MetaboLights, which is
+                completely based on open source technology, using open data formats and community based reviews
+                (https://www.ebi.ac.uk/metabolights/). MetaboLights adheres to MSI standards for metadata reporting and
+                uses the ISA-tab format for metadata. For NMR, the COSMOS initiative (Salek et al. 2015) is similar and
+                could be use by NPDI researchers to upload and share their NMR data with the nmrML format. Some users
+                will benefit for the simplicity of a single file while others will want to access only a part of the
+                dataset. Email is very commonly used but does not qualify as making data <i>accessible</i> because it
+                depends on the data owner pushing the data to the recipient.
+            </p>
 
-	<h4 class="subhead" id="how-to-test-5" resource="#how-to-test">How to Test</h4>
-	<p>
-	  Researchers should test to download their data and confirm that it is actually open.
-	</p>
+            <h4 class="subhead" id="how-to-test-5" resource="#how-to-test">How to Test</h4>
+            <p>
+                Researchers should test to download their data and confirm that it is actually open.
+            </p>
 
-	<h4 class="subhead" id="evidence-5" resource="#evidence">Evidence</h4>
-	<p>TODO: A short summary of evidence supporting the recommended approach.</p>	
-      </div>    
+            <h4 class="subhead" id="evidence-5" resource="#evidence">Evidence</h4>
+            <p>TODO: A short summary of evidence supporting the recommended approach.</p>
+        </div>
     </section>
 
     <section id="rec-content-negotiation">
-      <h3 class="hidden">If your lab website host datasets, serve the data using content negotiation</h3>
-      <div class="practice">
-	<p><span id="rec-lab-6" class="practicelab">If your lab website host datasets, serve the data using content negotiation</span></p>
-	<p class="practicedesc">If your lab website host datasets, serve the data using content negotiation</p>
+        <h3 class="hidden">If your lab website host datasets, serve the data using content negotiation</h3>
+        <div class="practice">
+            <p><span id="rec-lab-6" class="practicelab">If your lab website host datasets, serve the data using content negotiation</span>
+            </p>
+            <p class="practicedesc">If your lab website host datasets, serve the data using content negotiation</p>
 
-	<h4 class="subhead" id="why-6">Why</h4>
-	<p>
-	  Content negotiation make it possible to use single URL for each dataset rather than a different URL for each format (e.g., Excel, CSV, XML, JSON, etc.). Clients can request whatever format they need by specifying the format type in the HTTP request. 
-	</p>
-	<h4 class="subhead" id="intended-outcome-6" resource="#intended-outcome">Intended Outcome</h4>
-	<p> A single URL to a given dataset makes access much easier. Also, a single URL is easier to reference and track, increasing the potential for re-use.
-	  <ul class="benefitsList">
-	    <!-- This text list is replaced by the icons by scripting -->
-	    <li class="hidden">Access</li>
-	    <li class="hidden">Reuse</li>
-	    <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
-	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
-	  </ul>
-	</p>
+            <h4 class="subhead" id="why-6">Why</h4>
+            <p>
+                Content negotiation make it possible to use single URL for each dataset rather than a different URL for
+                each format (e.g., Excel, CSV, XML, JSON, etc.). Clients can request whatever format they need by
+                specifying the format type in the HTTP request.
+            </p>
+            <h4 class="subhead" id="intended-outcome-6" resource="#intended-outcome">Intended Outcome</h4>
+            <p> A single URL to a given dataset makes access much easier. Also, a single URL is easier to reference and
+                track, increasing the potential for re-use.
+            <ul class="benefitsList">
+                <!-- This text list is replaced by the icons by scripting -->
+                <li class="hidden">Access</li>
+                <li class="hidden">Reuse</li>
+                <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
+                <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
+            </ul>
+            </p>
 
-	<h4 class="subhead" id="possible-approach-to-implementation-6" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
-	<p>
-	  ...
-	</p>
+            <h4 class="subhead" id="possible-approach-to-implementation-6"
+                resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
+            <p>
+                A possible approach to implementation is to use the Accept header property from the request inside a
+                controller method. The client will set the Accept header to specify the reponse they are expecting, the
+                controller will then redirect to the proper method in order to return the correct reponse.
+            </p>
 
-	<h4 class="subhead" id="how-to-test-6" resource="#how-to-test">How to Test</h4>
-	<p>
-	  ...
-	</p>
+            <aside class="example">
+                <p>
+                    Different representations of the bus stops dataset can be served according to the specified content
+                    type of the HTTP Request:
+                </p>
+                <p>
+                    Using <code>cURL</code> to get the content of <code>http://data.mycity.example.com/transport/dataset/bus/stops</code>
+                    represented in CSV and in JSON-LD format.
+                </p>
+                <pre>
+      curl -L -H "Accept: text/csv" http://data.mycity.example.com/transport/dataset/bus/stops
+      curl -L -H "Accept: application/ld+json" http://data.mycity.example.com/transport/dataset/bus/stops
+    </pre>
+            </aside>
 
-	<h4 class="subhead" id="evidence-6" resource="#evidence">Evidence</h4>
-	<p>TODO: A short summary of evidence supporting the recommended approach.</p>
-      </div>    
+            <h4 class="subhead" id="how-to-test-6" resource="#how-to-test">How to Test</h4>
+            <p>
+                Check the available representations of the resource and try to get them specifying the accepted content
+                on the HTTP Request header.
+            </p>
+
+            <h4 class="subhead" id="evidence-6" resource="#evidence">Evidence</h4>
+            <p>TODO: A short summary of evidence supporting the recommended approach.</p>
+        </div>
     </section>
 
     <section id="rec-explicit-update-freq">
-      <h3 class="hidden">Make the update frequency of the data explicit</h3>
-      <div class="practice">
-    	<p><span id="rec-lab-7" class="practicelab">Make the update frequency of the data explicit</span></p>
-    	<p class="practicedesc">Make the update frequency of the data explicit</p>
+        <h3 class="hidden">Make the update frequency of the data explicit</h3>
+        <div class="practice">
+            <p><span id="rec-lab-7" class="practicelab">Make the update frequency of the data explicit</span></p>
+            <p class="practicedesc">Make the update frequency of the data explicit</p>
 
-	See the recommendation <a href="https://www.w3.org/TR/dwbp/#AccessUptoDate" target=_blank>Provide data up to date</a> in the W3C report "Data on the Web Best Practices" [[dwbp]].
+            See the recommendation <a href="https://www.w3.org/TR/dwbp/#AccessUptoDate" target=_blank>Provide data up to
+            date</a> in the W3C report "Data on the Web Best Practices" [[dwbp]].
     </section>
 
     <section id="rec-standard-vocabularies">
-      <h3 class="hidden">Strive to use standard data elements</h3>
-      <div class="practice">
-    	<p><span id="rec-lab-8" class="practicelab">Strive to use standard data elements</span></p>
-    	<p class="practicedesc">Strive to use standard data elements for both dataset metadata and for dataset fields</p>
+        <h3 class="hidden">Strive to use standard data elements</h3>
+        <div class="practice">
+            <p><span id="rec-lab-8" class="practicelab">Strive to use standard data elements</span></p>
+            <p class="practicedesc">Strive to use standard data elements for both dataset metadata and for dataset
+                fields</p>
 
-    	<h4 class="subhead" id="why-8">Why</h4>
-    	<p>
-    	  Standard data elements benefit researchers by making it simpler to find and integrate data from different sources.     
-    	</p>
-    	<h4 class="subhead" id="intended-outcome-8" resource="#intended-outcome">Intended Outcome</h4>
-    	<p> The use of standard data elements makes it possible for researchers to quickly integrate datasets that originate from different sources (interoperability). Another benefit is that standardized elements improve data search and retrieval. 
-    	  <ul class="benefitsList">
-    	    <!-- This text list is replaced by the icons by scripting -->
-	    <li class="hidden">Findability</li>
-    	    <li class="hidden">Interoperability</li>
-    	    <li class="hidden">Reuse</li>
-	    <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability" class="benefitIcon findabilityIcon"></li>
-    	    <li class="icon"><img src="W3C-Images/interoperability.svg" alt="Interoperability" class="benefitIcon interoperabilityIcon"></li>
-    	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
-    	  </ul>
-    	</p>
+            <h4 class="subhead" id="why-8">Why</h4>
+            <p>
+                Standard data elements benefit researchers by making it simpler to find and integrate data from
+                different sources.
+            </p>
+            <h4 class="subhead" id="intended-outcome-8" resource="#intended-outcome">Intended Outcome</h4>
+            <p> The use of standard data elements makes it possible for researchers to quickly integrate datasets that
+                originate from different sources (interoperability). Another benefit is that standardized elements
+                improve data search and retrieval.
+            <ul class="benefitsList">
+                <!-- This text list is replaced by the icons by scripting -->
+                <li class="hidden">Findability</li>
+                <li class="hidden">Interoperability</li>
+                <li class="hidden">Reuse</li>
+                <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability"
+                                      class="benefitIcon findabilityIcon"></li>
+                <li class="icon"><img src="W3C-Images/interoperability.svg" alt="Interoperability"
+                                      class="benefitIcon interoperabilityIcon"></li>
+                <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
+            </ul>
+            </p>
 
-    	<h4 class="subhead" id="possible-approach-to-implementation-8" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
-    	<p>
-    	  Standard data elements should be used for both dataset metadata and the datasets themselves. For metadata, researchers should use broadly accepted metadata standards such as the Data Tag Suite (DATS) [[DATS]], Dublin Core [[DC11]], or PROV [[prov-overview]]. If researchers are contributing their data to a repository, researchers should confirm repository should use a widely accepted metadata standard. Zenodo [[zenodo]], Figshare [[figshare]], and most university/research institute data catalogs satisfy this recommendation.
-	</p>
-	<p>
-	  For datasets (rather than dataset metadata), researchers should aim to maximise the reuse terms from existing broadly used ontologies and/or terminologies for data fields and values. One simple approach for data spreadsheets is to maintain a seperate file with a data dictionary for the fields used in the dataset. The dictionary should provide each data element's name (label), definition, and persistent identifier. Another approach would be to provide the dataset in a format such as XML, JSON-LD, of RDF that can explicitly associate each data item with a standard data element. Entire sets of standar data elements exist for some kinds of experiments. For example,  mzML is an open and generic XML (extensible markup language) representation of MS data [[martens-2011]]. The DIDEO ontology provides standard definitions for many data elements that arise from <emph>in vitro</emph> and clinical NPDI [[DIDEO-published]][[DIDEO-ontobee]]. Researcher can use ontology search tools such as Bioportal [[bioportal]], Ontobee [[ontobee]], or the EMBL-EBI Ontology Lookup Service [[ontology-lookup]] to search for candidate terms that provide clear definitions and persistent URLs. 	  
-    	</p>
+            <h4 class="subhead" id="possible-approach-to-implementation-8"
+                resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
+            <p>
+                Standard data elements should be used for both dataset metadata and the datasets themselves. For
+                metadata, researchers should use broadly accepted metadata standards such as the Data Tag Suite (DATS)
+                [[DATS]], Dublin Core [[DC11]], or PROV [[prov-overview]]. If researchers are contributing their data to
+                a repository, researchers should confirm repository should use a widely accepted metadata standard.
+                Zenodo [[zenodo]], Figshare [[figshare]], and most university/research institute data catalogs satisfy
+                this recommendation.
+            </p>
+            <p>
+                For datasets (rather than dataset metadata), researchers should aim to maximise the reuse terms from
+                existing broadly used ontologies and/or terminologies for data fields and values. One simple approach
+                for data spreadsheets is to maintain a seperate file with a data dictionary for the fields used in the
+                dataset. The dictionary should provide each data element's name (label), definition, and persistent
+                identifier. Another approach would be to provide the dataset in a format such as XML, JSON-LD, of RDF
+                that can explicitly associate each data item with a standard data element. Entire sets of standar data
+                elements exist for some kinds of experiments. For example, mzML is an open and generic XML (extensible
+                markup language) representation of MS data [[martens-2011]]. The DIDEO ontology provides standard
+                definitions for many data elements that arise from
+                <emph>in vitro</emph>
+                and clinical NPDI [[DIDEO-published]][[DIDEO-ontobee]]. Researcher can use ontology search tools such as
+                Bioportal [[bioportal]], Ontobee [[ontobee]], or the EMBL-EBI Ontology Lookup Service
+                [[ontology-lookup]] to search for candidate terms that provide clear definitions and persistent URLs.
+            </p>
 
-    	<h4 class="subhead" id="how-to-test-8" resource="#how-to-test">How to Test</h4>
-    	<p>
-    	  ...
-    	</p>
+            <h4 class="subhead" id="how-to-test-8" resource="#how-to-test">How to Test</h4>
+            <p>
+                ...
+            </p>
 
-    	<h4 class="subhead" id="evidence-8" resource="#evidence">Evidence</h4>
-   	<p>TODO: A short summary of evidence supporting the recommended approach.</p>
-      </div>
+            <h4 class="subhead" id="evidence-8" resource="#evidence">Evidence</h4>
+            <p>TODO: A short summary of evidence supporting the recommended approach.</p>
+        </div>
     </section>
 
     <section id="rec-api">
-      <h3 class="hidden">If possible, provide access to data via a well-documented REST-full API</h3>
-      <div class="practice">
-    	<p><span id="rec-lab-9" class="practicelab">If possible, provide access to data via a well-documented REST-full API</span></p>
-    	<p class="practicedesc">If possible, provide the ability for persons with programming experience to write scripts/programs that can access data via a well-documented REST-full API</p>
+        <h3 class="hidden">If possible, provide access to data via a well-documented REST-full API</h3>
+        <div class="practice">
+            <p><span id="rec-lab-9" class="practicelab">If possible, provide access to data via a well-documented REST-full API</span>
+            </p>
+            <p class="practicedesc">If possible, provide the ability for persons with programming experience to write
+                scripts/programs that can access data via a well-documented REST-full API</p>
 
-    	<h4 class="subhead" id="why-9">Why</h4>
-    	<p>
-    	  Access to datasets and associated metadata via a REST API makes it much simpler for researchers and developers to integrate some portion of the data into web sites and applications. 
-    	</p>
-    	<h4 class="subhead" id="intended-outcome-9" resource="#intended-outcome">Intended Outcome</h4>
-    	<p> The primary benefit is simple programmatic access to NPDI data and metadata. APIs result in data that is computable and more likely to be reused in research workflows. 
-    	  <ul class="benefitsList">
-    	    <!-- This text list is replaced by the icons by scripting -->
-    	    <li class="hidden">Access</li>
-    	    <li class="hidden">Reuse</li>
-    	    <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability" class="benefitIcon findabilityIcon"></li>
-    	    <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
-    	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
-    	  </ul>
-    	</p>
+            <h4 class="subhead" id="why-9">Why</h4>
+            <p>
+                Access to datasets and associated metadata via a REST API makes it much simpler for researchers and
+                developers to integrate some portion of the data into web sites and applications.
+            </p>
+            <h4 class="subhead" id="intended-outcome-9" resource="#intended-outcome">Intended Outcome</h4>
+            <p> The primary benefit is simple programmatic access to NPDI data and metadata. APIs result in data that is
+                computable and more likely to be reused in research workflows.
+            <ul class="benefitsList">
+                <!-- This text list is replaced by the icons by scripting -->
+                <li class="hidden">Access</li>
+                <li class="hidden">Reuse</li>
+                <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability"
+                                      class="benefitIcon findabilityIcon"></li>
+                <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
+                <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
+            </ul>
+            </p>
 
-    	<h4 class="subhead" id="possible-approach-to-implementation-9" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
-    	<p>
-    	  ...
-    	</p>
+            <h4 class="subhead" id="possible-approach-to-implementation-9"
+                resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
+            <p>
+                One approach to implement a REST-full API is to utilize an existing framework called Swagger and
+                integrate it with your application. In the case of a spring maven project the steps would be to add a
+                dependency such as <code>springfox</code> and then configure the <code>Docket</code> class as such:
+            </p>
 
-    	<h4 class="subhead" id="how-to-test-9" resource="#how-to-test">How to Test</h4>
-    	<p>
-    	  ...
-    	</p>
+            <aside class="example">
+        <pre>
+          @Configuration
+          @EnableSwagger2
+          public class SwaggerConfig {
 
-    	<h4 class="subhead" id="evidence-9" resource="#evidence">Evidence</h4>
-    	<p>TODO: A short summary of evidence supporting the recommended approach.</p>
-      </div>
+              @Bean
+              public Docket api(){
+                  return new Docket(DocumentationType.SWAGGER_2)
+                      .select()
+                      .apis(RequestHandlerSelectors.any())
+                      .paths(PathSelectors.regex("/api/.*"))
+                      .build()
+                      .apiInfo(apiInfo());
+              }
+
+              private ApiInfo apiInfo() {
+                  return new ApiInfoBuilder()
+                      .title("TITLE")
+                      .description("DESCRIPTION")
+                      .version("VERSION")
+                      .termsOfServiceUrl("http://terms-of-services.url")
+                      .license("LICENSE")
+                      .licenseUrl("http://url-to-license.com")
+                      .build();
+              }
+          }
+        </pre>
+            </aside>
+            <p>
+                Your Swagger 2.0 API documentation will now be available at <code>http://myapp/v2/api-docs</code>.
+            </p>
+
+            <h4 class="subhead" id="how-to-test-9" resource="#how-to-test">How to Test</h4>
+            <p>
+                By visiting <code>http://myapp/v2/api-docs</code> you should have a UI that you can interact with.
+                Simply check that every endpoint returns the expected output based on your given input.
+            </p>
+
+            <h4 class="subhead" id="evidence-9" resource="#evidence">Evidence</h4>
+            <p>TODO: A short summary of evidence supporting the recommended approach.</p>
+        </div>
     </section>
 
 
     <section id="rec-license">
-      <h3 class="hidden">Provide a license for data usage</h3>
-      <div class="practice">
-    	<p><span id="rec-lab-10" class="practicelab">Provide a license for data usage</span></p>
-    	<p class="practicedesc">Provide a license for data usage</p>
+        <h3 class="hidden">Provide a license for data usage</h3>
+        <div class="practice">
+            <p><span id="rec-lab-10" class="practicelab">Provide a license for data usage</span></p>
+            <p class="practicedesc">Provide a license for data usage</p>
 
-	See  See the recommendation <a href="https://www.w3.org/TR/dwbp/#licenses" target=_blank>Provide data license information</a> in the W3C report "Data on the Web Best Practices" [[dwbp]]. 
-      </div>
+            See See the recommendation <a href="https://www.w3.org/TR/dwbp/#licenses" target=_blank>Provide data license
+            information</a> in the W3C report "Data on the Web Best Practices" [[dwbp]].
+        </div>
     </section>
 
     <section id="rec-feedback">
-      <h3 class="hidden">Give future users of the data a way to provide feedback</h3>
-      <div class="practice">
-    	<p><span id="rec-lab-X" class="practicelab">Give future users of the data a way to provide feedback</span></p>
-    	<p class="practicedesc">Give future users of the data a way to provide feedback</p>
+        <h3 class="hidden">Give future users of the data a way to provide feedback</h3>
+        <div class="practice">
+            <p><span id="rec-lab-X" class="practicelab">Give future users of the data a way to provide feedback</span>
+            </p>
+            <p class="practicedesc">Give future users of the data a way to provide feedback</p>
 
-	See the two recommendations in the section <a href="https://www.w3.org/TR/dwbp/#feedbacksection" target=_blank>Feedback</a> in the W3C report "Data on the Web Best Practices" [[dwbp]].
-	    	
-      </div>
+            See the two recommendations in the section <a href="https://www.w3.org/TR/dwbp/#feedbacksection"
+                                                          target=_blank>Feedback</a> in the W3C report "Data on the Web
+            Best Practices" [[dwbp]].
+
+        </div>
     </section>
 
     <!-- <section id="rec-deposit-metadata"> -->
@@ -1231,201 +1598,265 @@
     <!--   </div>     -->
     <!-- </section> -->
 
-    
+
 </section>
 
 <section id="chem-recs" class="normative">
-  <h2>Recommendations specific to natural product chemistry</h2>
+    <h2>Recommendations specific to natural product chemistry</h2>
 
-      <section id="rec-open-raw-spectra">
-      <h3 class="hidden">Provide raw spectral data using an open file format</h3>
-      <div class="practice">
-    	<p><span id="rec-lab-12" class="practicelab">Provide raw spectral data using an open file format</span></p>
-    	<p class="practicedesc">NPDI researcher should provide a raw spectral data file derived from assays that identify and quantify the chemical constituents present in natural products, for both mass spectrometry (MS) and nuclear magnetic resonance (NMR) analysis in an open file format.</p>
+    <section id="rec-open-raw-spectra">
+        <h3 class="hidden">Provide raw spectral data using an open file format</h3>
+        <div class="practice">
+            <p><span id="rec-lab-12" class="practicelab">Provide raw spectral data using an open file format</span></p>
+            <p class="practicedesc">NPDI researcher should provide a raw spectral data file derived from assays that
+                identify and quantify the chemical constituents present in natural products, for both mass spectrometry
+                (MS) and nuclear magnetic resonance (NMR) analysis in an open file format.</p>
 
-    	<h4 class="subhead" id="why-12">Why</h4>
-    	<p>
-    	  Chemical analytical spectral data of a NP used for NPDI research should be accessible by the NPDI researcher community. Chemical metabolomic spectral data should be reusable by everyone. Researchers will more easily and reliably trust NPDI datasets if they have the opportunity to work on the raw files. It also provides the later opportunity to launch meta analyses that advance NPDI research by providing a powerful new interpretation based on multiples datasets.
-    	</p>
-    	<h4 class="subhead" id="intended-outcome-12" resource="#intended-outcome">Intended Outcome</h4>
-    	<p>By using an open file format for raw spectral data sharing, NPDI chemical data are more accessible and reusable. Data sharing, repository deposition, and re-analysis of raw spectral data will be easier. Researchers can transfer raw data between institutions and collaborators, without the need for proprietary software (Rocca-Serra et al. 2015).
-    	  <ul class="benefitsList">
-    	    <!-- This text list is replaced by the icons by scripting -->
-    	    <li class="hidden">Access</li>
-    	    <li class="hidden">Reuse</li>
-    	    <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
-    	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
-    	  </ul>
-    	</p>
+            <h4 class="subhead" id="why-12">Why</h4>
+            <p>
+                Chemical analytical spectral data of a NP used for NPDI research should be accessible by the NPDI
+                researcher community. Chemical metabolomic spectral data should be reusable by everyone. Researchers
+                will more easily and reliably trust NPDI datasets if they have the opportunity to work on the raw files.
+                It also provides the later opportunity to launch meta analyses that advance NPDI research by providing a
+                powerful new interpretation based on multiples datasets.
+            </p>
+            <h4 class="subhead" id="intended-outcome-12" resource="#intended-outcome">Intended Outcome</h4>
+            <p>By using an open file format for raw spectral data sharing, NPDI chemical data are more accessible and
+                reusable. Data sharing, repository deposition, and re-analysis of raw spectral data will be easier.
+                Researchers can transfer raw data between institutions and collaborators, without the need for
+                proprietary software (Rocca-Serra et al. 2015).
+            <ul class="benefitsList">
+                <!-- This text list is replaced by the icons by scripting -->
+                <li class="hidden">Access</li>
+                <li class="hidden">Reuse</li>
+                <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
+                <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
+            </ul>
+            </p>
 
-    	<h4 class="subhead" id="possible-approach-to-implementation-12" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
-    	<p>
-    	  Previously, mass spectrometry open file formats, mzXML (Pedrioli et al. 2004) and mzData (Orchard et al. 2004), have been combined to create mzML. mzML is an open and generic XML (extensible markup language) representation of MS data (Martens et al. 2011). The user needs to convert MS raw data files from proprietary formats into an open format such as mzML. To this end, open source software for reading and writing mzML are useful to the user, such as Proteowizard (http://proteowizard.sourceforge.net/) or OpenMS (http://open-ms.sourceforge.net/) , as well as package under R (mzR), Python (pymzML) and Matlab (MSiReader). Specific to MS metabolomics, the mzTab-M is a data standard for sharing quantitative results (Hoffmann et al. 2019). This is a tab-separated text format with a standardized structure through the design of a detailed specification document. For NMR data, nmrML is an XML based, vendor-neutral open exchange and data storage format which the NMR community had agree to use (Schober et al. 2018).  Other initiatives are NMReDATA (nmredata.org) and the universal raw data format, the Allotrope Data Format (ADF) developed by the Allotrope Foundation (allotrope.org). In NMR, the Raw Data Initiative is a source of information for the NPDI researcher on how to make FAIR NMR data (B. McAlpine et al. 2019).
-    	</p>
+            <h4 class="subhead" id="possible-approach-to-implementation-12"
+                resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
+            <p>
+                Previously, mass spectrometry open file formats, mzXML [[Pedrioli-2004]] and mzData [[Orchard-2004]], have been combined to create mzML. mzML is an open and generic XML (extensible markup language)
+                representation of MS data (Martens et al. 2011). The user needs to convert MS raw data files from
+                proprietary formats into an open format such as mzML. To this end, open source software for reading and
+                writing mzML are useful to the user, such as Proteowizard (http://proteowizard.sourceforge.net/) or
+                OpenMS (http://open-ms.sourceforge.net/) , as well as package under R (mzR), Python (pymzML) and Matlab
+                (MSiReader). Specific to MS metabolomics, the mzTab-M is a data standard for sharing quantitative
+                results [[Hoffmann-2019]]. This is a tab-separated text format with a standardized structure
+                through the design of a detailed specification document. For NMR data, nmrML is an XML based,
+                vendor-neutral open exchange and data storage format which the NMR community had agree to use [[Schober-2018]]. Other initiatives are NMReDATA (nmredata.org) and the universal raw data format, the
+                Allotrope Data Format (ADF) developed by the Allotrope Foundation (allotrope.org). In NMR, the Raw Data
+                Initiative is a source of information for the NPDI researcher on how to make FAIR NMR data [[McAlpine-2019]].
+            </p>
 
-    	<h4 class="subhead" id="how-to-test-12" resource="#how-to-test">How to Test</h4>
-    	<p>
-    	  Researchers should test if their vendor spectral file conversion to open format spectral file have been done correctly. They could test to upload their data to any software or program using mzXML, mzTab-M, nmrML or nmredata and confirm that the file is correct.
-    	</p>
+            <h4 class="subhead" id="how-to-test-12" resource="#how-to-test">How to Test</h4>
+            <p>
+                Researchers should test if their vendor spectral file conversion to open format spectral file have been
+                done correctly. They could test to upload their data to any software or program using mzXML, mzTab-M,
+                nmrML or nmredata and confirm that the file is correct.
+            </p>
 
-    	<h4 class="subhead" id="evidence-12" resource="#evidence">Evidence</h4>
-    	<p>TODO</p>
-      </div>
+            <h4 class="subhead" id="evidence-12" resource="#evidence">Evidence</h4>
+            <p>TODO</p>
+        </div>
     </section>
 
 
     <section id="rec-standard-chem-results">
-      <h3 class="hidden">Publish NMR and MS results following standards</h3>
-      <div class="practice">
-    	<p><span id="rec-lab-13" class="practicelab">Publish NMR and MS results following standards</span></p>
-    	<p class="practicedesc">NPDI researcher should share and publish NMR and MS results following standards recognized by the field. For example, spectral images must to have a good resolution, NMR assigned peaks tables or text have to be complete and to follow standards, filtered peak list with intensity in metabolomics have to be shared and identification of compounds have to follow standard procedure.</p>
+        <h3 class="hidden">Publish NMR and MS results following standards</h3>
+        <div class="practice">
+            <p><span id="rec-lab-13" class="practicelab">Publish NMR and MS results following standards</span></p>
+            <p class="practicedesc">NPDI researcher should share and publish NMR and MS results following standards
+                recognized by the field. For example, spectral images must to have a good resolution, NMR assigned peaks
+                tables or text have to be complete and to follow standards, filtered peak list with intensity in
+                metabolomics have to be shared and identification of compounds have to follow standard procedure.</p>
 
-    	<h4 class="subhead" id="why-13">Why</h4>
-    	<p>
-    	  This practice will make NPDI NMR and MS results FAIR for the community to analyze and interpret. Data will already have been transformed making them accessible for a quick and easy interpretation of the results.
-    	</p>
-    	<h4 class="subhead" id="intended-outcome-13" resource="#intended-outcome">Intended Outcome</h4>
-    	<p>This would benefit the community by facilitating publication and dissemination of the results. 
-    	  <ul class="benefitsList">
-    	    <!-- This text list is replaced by the icons by scripting -->
-    	    <li class="hidden">Access</li>
-	    <li class="hidden">Reuse</li>
-    	    <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
-    	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
-    	  </ul>
-    	</p>
+            <h4 class="subhead" id="why-13">Why</h4>
+            <p>
+                This practice will make NPDI NMR and MS results FAIR for the community to analyze and interpret. Data
+                will already have been transformed making them accessible for a quick and easy interpretation of the
+                results.
+            </p>
+            <h4 class="subhead" id="intended-outcome-13" resource="#intended-outcome">Intended Outcome</h4>
+            <p>This would benefit the community by facilitating publication and dissemination of the results.
+            <ul class="benefitsList">
+                <!-- This text list is replaced by the icons by scripting -->
+                <li class="hidden">Access</li>
+                <li class="hidden">Reuse</li>
+                <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
+                <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
+            </ul>
+            </p>
 
-    	<h4 class="subhead" id="possible-approach-to-implementation-13" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
-    	<p>
-    	  Reporting of NMR spectra is most frequently done using tables or descriptive text including HSQC, HMBC, and NOE correlations, as well as listings of chemical shifts, coupling constants, multiplicities and assignments (B. McAlpine et al. 2019). Journals provide guidelines, as ACS journal (“NMR Guidelines for ACS Journals,” n.d.). Then, it is recommended to upload the spectral file as an image with a good resolution, often in PDF format. To share high quality data in MS, mass spectra are also shared as an image to visualize fragmentation pattern in the case of tandem MS. Regarding metabolite identification in MS, the Metabolomics Standards Initiative (MSI) had defined four different levels of metabolites identification, which are identified metabolites (level 1), putatively annotated compounds (level 2), putatively characterized compound classes (level 3) and unknown compound (level 4) (Salek et al. 2013). It is recommended to report for the metabolite identification the level of identification, the common name and the structural code like the InChI string. Also, external database identifiers, chemical structure image and chemical formula are frequently reported.
-    	</p>
+            <h4 class="subhead" id="possible-approach-to-implementation-13"
+                resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
+            <p>
+                Reporting of NMR spectra is most frequently done using tables or descriptive text including HSQC, HMBC,
+                and NOE correlations, as well as listings of chemical shifts, coupling constants, multiplicities and
+                assignments [[McAlpine-2019]]. Journals provide guidelines, as ACS journal (“NMR Guidelines for
+                ACS Journals,” n.d.). Then, it is recommended to upload the spectral file as an image with a good
+                resolution, often in PDF format. To share high quality data in MS, mass spectra are also shared as an
+                image to visualize fragmentation pattern in the case of tandem MS. Regarding metabolite identification
+                in MS, the Metabolomics Standards Initiative (MSI) had defined four different levels of metabolites
+                identification, which are identified metabolites (level 1), putatively annotated compounds (level 2),
+                putatively characterized compound classes (level 3) and unknown compound (level 4) [[Salek-2013]].
+                It is recommended to report for the metabolite identification the level of identification, the common
+                name and the structural code like the InChI string. Also, external database identifiers, chemical
+                structure image and chemical formula are frequently reported.
+            </p>
 
-    	<h4 class="subhead" id="how-to-test-13" resource="#how-to-test">How to Test</h4>
-    	<p>
-    	  TODO
-    	</p>
+            <h4 class="subhead" id="how-to-test-13" resource="#how-to-test">How to Test</h4>
+            <p>
+                TODO
+            </p>
 
-    	<h4 class="subhead" id="evidence-13" resource="#evidence">Evidence</h4>
-    	  <p>TODO: A short summary of evidence supporting the recommended approach.</p>
-      </div> 
+            <h4 class="subhead" id="evidence-13" resource="#evidence">Evidence</h4>
+            <p>TODO: A short summary of evidence supporting the recommended approach.</p>
+        </div>
     </section>
 
 
     <section id="rec-standard-exp-metadata-chem">
-      <h3 class="hidden">Report experiment metadata along with the spectral raw data file</h3>
-      <div class="practice">
-    	<p><span id="rec-lab-X" class="practicelab">Report experiment metadata along with the spectral raw data file</span></p>
-    	<p class="practicedesc">Experimental metadata have to be reported with the spectral raw data file and results following standards. </p>
+        <h3 class="hidden">Report experiment metadata along with the spectral raw data file</h3>
+        <div class="practice">
+            <p><span id="rec-lab-X"
+                     class="practicelab">Report experiment metadata along with the spectral raw data file</span></p>
+            <p class="practicedesc">Experimental metadata have to be reported with the spectral raw data file and
+                results following standards. </p>
 
-    	<h4 class="subhead" id="why-14">Why</h4>
-    	<p>
-    	  Experimental metadata have to follow reporting standards to make NPDI data reproducible and comparable with other NPDI studies. This allow results from different laboratories to be shared and re-interpreted.
-    	</p>
-    	<h4 class="subhead" id="intended-outcome-14" resource="#intended-outcome">Intended Outcome</h4>
+            <h4 class="subhead" id="why-14">Why</h4>
+            <p>
+                Experimental metadata have to follow reporting standards to make NPDI data reproducible and comparable
+                with other NPDI studies. This allow results from different laboratories to be shared and re-interpreted.
+            </p>
+            <h4 class="subhead" id="intended-outcome-14" resource="#intended-outcome">Intended Outcome</h4>
 
-    	<p>TODO
-    	  <ul class="benefitsList">
-    	    <!-- This text list is replaced by the icons by scripting -->
-    	    <li class="hidden">Findability</li>
-    	    <li class="hidden">Interoperability</li>
-    	    <li class="hidden">Reuse</li>
-    	    <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability" class="benefitIcon findabilityIcon"></li>
-    	    <li class="icon"><img src="W3C-Images/interoperability.svg" alt="Interoperability" class="benefitIcon interoperabilityIcon"></li>
-    	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
-    	  </ul>
-    	</p>
-	
-    	<h4 class="subhead" id="possible-approach-to-implementation-14" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
-    	<p>
-    	  Experiment metadata covers the whole range necessary to understand how the experiment was conducted: the species under investigation, which organism part the metabolite was isolated from, which instruments were used, and which parameters were used. Researcher could use the properly documented metadata format IsaTab (Salek et al. 2013) (ISA for Investigation, Study and Assay), as well as the raw data format Allotrope Raw Data format (https://www.allotrope.org) in NPDI studies. Every metadata is backed by a term in a commonly used ontology. Researchers should follow the minimal information standard, as created by the Metabolomics society in 2007, with the metabolomics standards initiative (MSI Board Members et al. 2007). Similar initiatives are undergoing for NMR studies, where the ISA format is also recommended (B. McAlpine et al. 2019).
-    	</p>
+            <p>TODO
+            <ul class="benefitsList">
+                <!-- This text list is replaced by the icons by scripting -->
+                <li class="hidden">Findability</li>
+                <li class="hidden">Interoperability</li>
+                <li class="hidden">Reuse</li>
+                <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability"
+                                      class="benefitIcon findabilityIcon"></li>
+                <li class="icon"><img src="W3C-Images/interoperability.svg" alt="Interoperability"
+                                      class="benefitIcon interoperabilityIcon"></li>
+                <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
+            </ul>
+            </p>
 
-    	<h4 class="subhead" id="how-to-test-14" resource="#how-to-test">How to Test</h4>
-    	<p>
-    	  The researcher could try to re-acquire the spectral data with the same sample only by using experimental metadata reported and compare results.
-    	</p>
+            <h4 class="subhead" id="possible-approach-to-implementation-14"
+                resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
+            <p>
+                Experiment metadata covers the whole range necessary to understand how the experiment was conducted: the
+                species under investigation, which organism part the metabolite was isolated from, which instruments
+                were used, and which parameters were used. Researcher could use the properly documented metadata format
+                IsaTab [[Salek-2013]] (ISA for Investigation, Study and Assay), as well as the raw data format
+                Allotrope Raw Data format (https://www.allotrope.org) in NPDI studies. Every metadata is backed by a
+                term in a commonly used ontology. Researchers should follow the minimal information standard, as created
+                by the Metabolomics society in 2007, with the metabolomics standards initiative (MSI Board Members et
+                al. 2007). Similar initiatives are undergoing for NMR studies, where the ISA format is also recommended
+                [[McAlpine-2019]].
+            </p>
 
-    	<h4 class="subhead" id="evidence-14" resource="#evidence">Evidence</h4>
-    	<p>TODO: A short summary of evidence supporting the recommended approach.</p>
-      </div>
+            <h4 class="subhead" id="how-to-test-14" resource="#how-to-test">How to Test</h4>
+            <p>
+                The researcher could try to re-acquire the spectral data with the same sample only by using experimental
+                metadata reported and compare results.
+            </p>
+
+            <h4 class="subhead" id="evidence-14" resource="#evidence">Evidence</h4>
+            <p>TODO: A short summary of evidence supporting the recommended approach.</p>
+        </div>
     </section>
 
 
     <section id="rec-reproducible-workflow-chem">
-      <h3 class="hidden">Use reproducible NMR and MS analysis workflows</h3>
-      <div class="practice">
-    	<p><span id="rec-lab-16" class="practicelab">Use reproducible NMR and MS analysis workflows</span></p>
-    	<p class="practicedesc">Use reproducible NMR and MS analysis workflows by clearly documenting the analytical process in an open and sharable manner. </p>
+        <h3 class="hidden">Use reproducible NMR and MS analysis workflows</h3>
+        <div class="practice">
+            <p><span id="rec-lab-16" class="practicelab">Use reproducible NMR and MS analysis workflows</span></p>
+            <p class="practicedesc">Use reproducible NMR and MS analysis workflows by clearly documenting the analytical
+                process in an open and sharable manner. </p>
 
-    	<h4 class="subhead" id="why-16">Why</h4>
-    	<p>
-    	  This is specifically relevant to make NPDI data FAIR as the NPDI scientific community can then reproduced exactly the workflow apply on the spectral raw data by using published and open access bioinformatics tools. By using proprietary software or “in house” functions, NPDI raw spectral data are less accessible and reusable. 
-    	</p>
-    	<h4 class="subhead" id="intended-outcome-16" resource="#intended-outcome">Intended Outcome</h4>
+            <h4 class="subhead" id="why-16">Why</h4>
+            <p>
+                This is specifically relevant to make NPDI data FAIR as the NPDI scientific community can then
+                reproduced exactly the workflow apply on the spectral raw data by using published and open access
+                bioinformatics tools. By using proprietary software or “in house” functions, NPDI raw spectral data are
+                less accessible and reusable.
+            </p>
+            <h4 class="subhead" id="intended-outcome-16" resource="#intended-outcome">Intended Outcome</h4>
 
-    	<p>TODO
-    	  <ul class="benefitsList">
-    	    <!-- This text list is replaced by the icons by scripting -->
-    	    <li class="hidden">Access</li>
-    	    <li class="hidden">Reuse</li>
-    	    <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
-    	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
-    	  </ul>
-    	</p>
+            <p>TODO
+            <ul class="benefitsList">
+                <!-- This text list is replaced by the icons by scripting -->
+                <li class="hidden">Access</li>
+                <li class="hidden">Reuse</li>
+                <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
+                <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
+            </ul>
+            </p>
 
-    	<h4 class="subhead" id="possible-approach-to-implementation-16" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
-    	<p>
-    	  The use of free and open tools, software, workflow which are reproducible. It is important to be explicit about the workflow used. The workflow could have its own identifier, for example with a Github directory. In metabolomics, such an open access pipeline exists, https://workflow4metabolomics.org which is a collaborative portal dedicated to metabolomics data processing, analysis and annotation for the Metabolomics community. The GALAXY environment also proposes different open access packages, as well as R with Xcms for MS data and Batman for NMR data.
-    	</p>
+            <h4 class="subhead" id="possible-approach-to-implementation-16"
+                resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
+            <p>
+                The use of free and open tools, software, workflow which are reproducible. It is important to be
+                explicit about the workflow used. The workflow could have its own identifier, for example with a Github
+                directory. In metabolomics, such an open access pipeline exists, https://workflow4metabolomics.org which
+                is a collaborative portal dedicated to metabolomics data processing, analysis and annotation for the
+                Metabolomics community. The GALAXY environment also proposes different open access packages, as well as
+                R with Xcms for MS data and Batman for NMR data.
+            </p>
 
-    	<h4 class="subhead" id="how-to-test-16" resource="#how-to-test">How to Test</h4>
-    	<p>
-    	  Researchers may use a test dataset and confirm that the bioinformatics workflow used is applicable to other datasets.
-    	</p>
+            <h4 class="subhead" id="how-to-test-16" resource="#how-to-test">How to Test</h4>
+            <p>
+                Researchers may use a test dataset and confirm that the bioinformatics workflow used is applicable to
+                other datasets.
+            </p>
 
-    	<h4 class="subhead" id="evidence-16" resource="#evidence">Evidence</h4>
-    	<p>A short summary of evidence supporting the recommended approach.</p>
-      </div>
+            <h4 class="subhead" id="evidence-16" resource="#evidence">Evidence</h4>
+            <p>A short summary of evidence supporting the recommended approach.</p>
+        </div>
     </section>
 
-    
+
 </section>
 
 <section id="pharm-recs" class="normative">
-  <h2>Recommendations specific to NPDI pharmacology</h2>
+    <h2>Recommendations specific to NPDI pharmacology</h2>
 </section>
 
 <section id="examples" class="informative">
-  <h2>Examples </h2> 
+    <h2>Examples </h2>
 </section>
 
 
 <section id="justification" class="informative">
-  <h2>Background and use cases</h2>
-</section>
-
-
-
-<section class="informative">
-  <h2>Discussion</h2>
+    <h2>Background and use cases</h2>
 </section>
 
 
 <section class="informative">
-  <h2>Conclusion</h2>
+    <h2>Discussion</h2>
+</section>
+
+
+<section class="informative">
+    <h2>Conclusion</h2>
 </section>
 
 <section class="informative">
-  <h2>Acknowledgments</h2>
-  <p>
-    Development of this Community Group Report was partially supported
-    by a grant from the United States National Center for
-    Complementary and Integrative Health U54 AT008909.
-  </p>
+    <h2>Acknowledgments</h2>
+    <p>
+        Development of this Community Group Report was partially supported
+        by a grant from the United States National Center for
+        Complementary and Integrative Health U54 AT008909.
+    </p>
 </section>
 
 <section class="appendix" class="informative">
-  <h2>Appendices</h2>
+    <h2>Appendices</h2>
 </section>
 </body>
 </html>
