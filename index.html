@@ -672,7 +672,7 @@
         research that NPDI study datasets should be more findable, accessible, interoperable, and reusable (FAIR). This
         report proposes a set of recommended approaches to help NPDI researchers make their data more FAIR. After
         clarifying the intended audience, scope, and context, this report provides several recommendations organized
-        into general and research-specific categories. Busy researchers can jump to <a href="#rec-summary"></a> to
+        into general and research-specific categories. Busy researchers can jump to <a href="rec-summary-general"></a> to
         obtain a quick overview of the recommendations and follow links to specific FAIR practices.
     </p>
     <p>
@@ -683,7 +683,7 @@
     <h2>Audience</h2>
     <p>
         This report is written for use by anyone who generates NPDI research data. These include, but are not limited
-        to, analytical chemists, clinical pharmacologists, pharmacists, and drug-compendium editors. Other natural
+        to analytical chemists and clinical pharmacologists. Other natural
         product stakeholders might also benefit from the information in this report including funding agencies that
         support NPDI research, biomedical research librarians tasked with searching and/or indexing NPDI datasets, and
         data scientists working on natural product related analyses.
@@ -716,11 +716,10 @@
     <p>
         <i>Clinical:</i> Appropriately designed clinical pharmacokinetic interaction studies where the natural product
         is the precipitant and a drug (or drugs) is the object can provide a definitive assessment of interaction risk.
-        Clinical data include pharmacokinetic outcomes (AUC, Cmax, Tmax, t1/2) describing object drug disposition in the
+        Clinical data include pharmacokinetic outcomes (AUC, C<sub>max</sub>, T<sub>max</sub>, t<sub>1/2</sub>) describing object drug disposition in the
         absence and presence of the precipitating natural product.
     </p>
 
-    <div class="issue" data-number="1"></div>
 </section>
 
 <section class='informative'>
@@ -728,7 +727,7 @@
     <p>
         <a href="#Fig-context"></a> provides an overview of the context for this report. The contributors to this report
         have considered both the types of data and the data management workflows specific to chemistry and pharmacology
-        researchers. They then reviewed journal articles, white papers, and other types of reports that make
+        researchers involved in NPDI research. They then reviewed journal articles, white papers, and other types of reports that make
         recommendations on how to make biomedical datasets more FAIR. They also reviewed specific requirements related
         to FAIR that are emerging from either organizations that fund NPDI research or journals that publish the NPDI
         studies. This report makes the recommendations and requirements from these sources more accessible to
@@ -742,15 +741,11 @@
              width"1152" height="864">
         <figcaption>The context for this report on making natural product – drug interaction study data findable,
             accessible, interoperable and reusable (FAIR). <i>TODO: Cite the specific reports and guidances that went
-                into the recommendations. Then explain the sub-figures briefly and reference <a href="#rec-summary"></a>
+                into the recommendations. Then explain the sub-figures briefly and reference the recommendations TOC</a>
             </i></figcaption>
     </figure>
 </section>
 
-<section class='informative'>
-    <h2>Namespaces</h2>
-    <div class="issue" data-number="2"></div>
-</section>
 
 <section class='informative'>
     <h2>Recommendation Template</h2>
@@ -796,8 +791,8 @@
         <p>Information on how to test that a researcher has followed the recommended approach. In many cases, testing
             can be automated.</p>
 
-        <h4 class="subhead" id="evidence" resource="#evidence">Evidence</h4>
-        <p>A short summary of evidence supporting the recommended approach.</p>
+        <h4 class="subhead" id="example" resource="#example">Example</h4>
+        <p>A short example of the recommended approach applied to data emerging from NPDI research.</p>
     </div>
 </section>
 
@@ -837,16 +832,14 @@
 <!-- 	  ... -->
 <!-- 	</p> -->
 
-<!-- 	<h4 class="subhead" id="evidence-X" resource="#evidence">Evidence</h4> -->
+<!-- 	<h4 class="subhead" id="example-X" resource="#example">Example</h4> -->
 <!-- 	<div class="issue"> -->
-<!-- 	  <p>A short summary of evidence supporting the recommended approach.</p> -->
+<!-- 	  <p>A short example of the recommended approach applied to data emerging from NPDI research.</p> -->
 <!-- 	</div> -->
 <!--   </div>     -->
 <!-- </section> -->
 
 
-<section id="rec-summary" class='normative'>
-    <h2>Recommendations Summary</h2>
 
     <!-- <table style="width:100%; border: none"> -->
     <!--   <tr> -->
@@ -870,10 +863,11 @@
     <!--   </tr> -->
     <!-- </table> -->
 
+
+<section id="rec-summary-general" class='normative'>
+    <h2>Recommendations that apply generally to NPDI research</h2>
+
     <table style="width:100%; border: none">
-        <tr style="border:none">
-            <b>Recommendations that apply generally to NPDI research </b>
-        </tr>
         <tr>
             <td class="benefitsList"><a href="#rec-identifier"> Assign to a dataset a globally unique and persistent
                 identifier</a>
@@ -962,12 +956,12 @@
         </tr>
 
     </table>
+</section>
 
+<section id="rec-summary-general" class='normative'>
+    <h2>Recommendations specific to natural product chemistry</h2>
+    
     <table style="width:100%; border: none">
-        <tr>
-            <b>Recommendations specific to natural product chemistry</b>
-        </tr>
-
         <tr>
             <td class="benefitsList"><a href="#rec-open-raw-spectra"> Provide raw spectral using with an open file
                 format</a>
@@ -1005,18 +999,24 @@
         </tr>
 
     </table>
+</section>
 
-    <table style="width:100%; border: none">
+<section id="rec-summary-general" class='normative'>
+    <h2>Recommendations specific to NPDI pharmacology</h2>
+
+    <table style="width:100%; border: none">        
+      <tr>
+            <td class="benefitsList"><a href="#rec-pharm-clear-description"> Give a clear description of the experiment</a>
+                <img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
+            </td>
+        </tr>
+
         <tr>
-            <b>Recommendations specific to NPDI pharmacology</b>
-            <td style="border:none;">
-                <ul style="list-style: none; padding: 0;  margin: 0;">
-                    <li><a href="#rec-identifier">Recommendation Y</a>: TODO:...</li>
-                </ul>
+            <td class="benefitsList"><a href="#rec-pharm-standard-conditions"> Reporting standard experimental conditions</a>
+                <img src="W3C-Images/reuse-small.svg" alt="Reuse" class="benefitIcon reuseIcon">
             </td>
         </tr>
     </table>
-
 </section>
 
 
@@ -1079,7 +1079,7 @@
                 explicitly states that the identifiers were designed for persistence and global uniqueness.
             </p>
 
-            <h4 class="subhead" id="evidence-1" resource="#evidence">Evidence</h4>
+            <h4 class="subhead" id="example-1" resource="#example">Example</h4>
             <p>TODO: Fang et al. proposed a systems pharmacology infrastructure to predict new drug targets and
                 anticancer indications of natural products.....PMID: 28956927</p>
         </div>
@@ -1135,7 +1135,7 @@
                 they automatically satisfy this recommendation.
             </p>
 
-            <h4 class="subhead" id="evidence-2" resource="#evidence">Evidence</h4>
+            <h4 class="subhead" id="example-2" resource="#example">Example</h4>
             <p>TODO cite Force 11 and Research Resource Identifiers</p>
         </div>
     </section>
@@ -1193,8 +1193,8 @@
                 satisfy this recommendation.
             </p>
 
-            <h4 class="subhead" id="evidence-3" resource="#evidence">Evidence</h4>
-            <p>TODO: A short summary of evidence supporting the recommended approach.</p>
+            <h4 class="subhead" id="example-3" resource="#example">Example</h4>
+            <p>TODO: A short example of the recommended approach applied to data emerging from NPDI research.</p>
         </div>
     </section>
 
@@ -1258,8 +1258,8 @@
                 document.
             </p>
 
-            <h4 class="subhead" id="evidence-4" resource="#evidence">Evidence</h4>
-            <p>TODO: A short summary of evidence supporting the recommended approach.</p>
+            <h4 class="subhead" id="example-4" resource="#example">Example</h4>
+            <p>TODO: A short example of the recommended approach applied to data emerging from NPDI research.</p>
         </div>
     </section>
 
@@ -1312,8 +1312,8 @@
                 Researchers should test to download their data and confirm that it is actually open.
             </p>
 
-            <h4 class="subhead" id="evidence-5" resource="#evidence">Evidence</h4>
-            <p>TODO: A short summary of evidence supporting the recommended approach.</p>
+            <h4 class="subhead" id="example-5" resource="#example">Example</h4>
+            <p>TODO: A short example of the recommended approach applied to data emerging from NPDI research.</p>
         </div>
     </section>
 
@@ -1371,8 +1371,8 @@
                 on the HTTP Request header.
             </p>
 
-            <h4 class="subhead" id="evidence-6" resource="#evidence">Evidence</h4>
-            <p>TODO: A short summary of evidence supporting the recommended approach.</p>
+            <h4 class="subhead" id="example-6" resource="#example">Example</h4>
+            <p>TODO: A short example of the recommended approach applied to data emerging from NPDI research.</p>
         </div>
     </section>
 
@@ -1446,8 +1446,8 @@
                 When creating metadata it is crucial to abide by the fields of that standard. For example if you choose to utilize the DATS [[DATS]] format you must use the fields provided here <a href="https://datatagsuite.github.io/schema/dataset_schema.json"> https://datatagsuite.github.io/schema/dataset_schema.json</a> when creating metadata. This can then be validated using the python code located here: <a href="https://github.com/datatagsuite/dats-tools">https://github.com/datatagsuite/dats-tools</a>.
             </p>
 
-            <h4 class="subhead" id="evidence-8" resource="#evidence">Evidence</h4>
-            <p>TODO: A short summary of evidence supporting the recommended approach.</p>
+            <h4 class="subhead" id="example-8" resource="#example">Example</h4>
+            <p>TODO: A short example of the recommended approach applied to data emerging from NPDI research.</p>
         </div>
     </section>
 
@@ -1525,8 +1525,8 @@
                 Simply check that every endpoint returns the expected output based on your given input.
             </p>
 
-            <h4 class="subhead" id="evidence-9" resource="#evidence">Evidence</h4>
-            <p>TODO: A short summary of evidence supporting the recommended approach.</p>
+            <h4 class="subhead" id="example-9" resource="#example">Example</h4>
+            <p>TODO: A short example of the recommended approach applied to data emerging from NPDI research.</p>
         </div>
     </section>
 
@@ -1591,9 +1591,9 @@
     <!-- 	  ... -->
     <!-- 	</p> -->
 
-    <!-- 	<h4 class="subhead" id="evidence-X" resource="#evidence">Evidence</h4> -->
+    <!-- 	<h4 class="subhead" id="example-X" resource="#example">Example</h4> -->
     <!-- 	<div class="issue"> -->
-    <!-- 	  <p>A short summary of evidence supporting the recommended approach.</p> -->
+    <!-- 	  <p>A short example of the recommended approach applied to data emerging from NPDI research.</p> -->
     <!-- 	</div> -->
     <!--   </div>     -->
     <!-- </section> -->
@@ -1657,7 +1657,7 @@
                 nmrML or nmredata and confirm that the file is correct.
             </p>
 
-            <h4 class="subhead" id="evidence-12" resource="#evidence">Evidence</h4>
+            <h4 class="subhead" id="example-12" resource="#example">Example</h4>
             <p>TODO</p>
         </div>
     </section>
@@ -1711,8 +1711,8 @@
                 TODO
             </p>
 
-            <h4 class="subhead" id="evidence-13" resource="#evidence">Evidence</h4>
-            <p>TODO: A short summary of evidence supporting the recommended approach.</p>
+            <h4 class="subhead" id="example-13" resource="#example">Example</h4>
+            <p>TODO: A short example of the recommended approach applied to data emerging from NPDI research.</p>
         </div>
     </section>
 
@@ -1766,8 +1766,8 @@
                 metadata reported and compare results.
             </p>
 
-            <h4 class="subhead" id="evidence-14" resource="#evidence">Evidence</h4>
-            <p>TODO: A short summary of evidence supporting the recommended approach.</p>
+            <h4 class="subhead" id="example-14" resource="#example">Example</h4>
+            <p>TODO: A short example of the recommended approach applied to data emerging from NPDI research.</p>
         </div>
     </section>
 
@@ -1815,26 +1815,101 @@
                 other datasets.
             </p>
 
-            <h4 class="subhead" id="evidence-16" resource="#evidence">Evidence</h4>
-            <p>A short summary of evidence supporting the recommended approach.</p>
+            <h4 class="subhead" id="example-16" resource="#example">Example</h4>
+            <p>A short example of the recommended approach applied to data emerging from NPDI research.</p>
         </div>
     </section>
-
-
 </section>
 
 <section id="pharm-recs" class="normative">
-    <h2>Recommendations specific to NPDI pharmacology</h2>
+  <h2>Recommendations specific to NPDI pharmacology</h2>
+
+<section id="rec-pharm-clear-description">
+  <h3 class="hidden">Give a clear description of the experiment</h3>
+  <div class="practice">
+	<p><span id="rec-lab-17" class="practicelab">Give a clear description of the experiment</span></p>
+	<p class="practicedesc">NPDI pharmacologist should clearly state details about the experiment including the effect tested, experimental system used, natural product/natural product constituant/drugs, and the object and object metabolite measured.</p>
+
+	<h4 class="subhead" id="why-17">Why</h4>
+	<p>
+	  A clear description of the experiment helps ensure that NPDI pharmacology results more reusable by other NPDI researchers. 
+	</p>
+	<h4 class="subhead" id="intended-outcome-17" resource="#intended-outcome">Intended Outcome</h4>
+	<p> Researchers interested in the experiment data will have an improved understanding of the experimental context that led to the reported NPDI results. This should help the researchers assess if data from an NPDI experiment informs their research. Also, it should help researchers more easily reproduce the experiments and determine if new experiments are necessary.
+	  <ul class="benefitsList">
+	    <!-- This text list is replaced by the icons by scripting -->
+	    <li class="hidden">Reuse</li>
+	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
+	  </ul>
+	</p>
+
+	<h4 class="subhead" id="possible-approach-to-implementation-17" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
+	<p>
+	  A short and efficient title has to be chosen for each
+	  experiement, indicating in few words what is the main effect
+	  detected, inhibition of an enzyme or not?, and what is the
+	  system tested with which natural product. The NPDI
+	  pharmacologist is highly encouraged to details which enzymes
+	  are involved, what is the test system, the object and it’s
+	  metabolite measured as well as the natural product tested.
+	</p>
+
+	<h4 class="subhead" id="how-to-test-17" resource="#how-to-test">How to Test</h4>
+	<p>
+	  ...
+	</p>
+
+	<h4 class="subhead" id="example-17" resource="#example">Example</h4>
+	  <p>A short example of the recommended approach applied to data emerging from NPDI research.</p>
+  </div>
 </section>
 
-<section id="examples" class="informative">
-    <h2>Examples </h2>
+
+<section id="rec-pharm-standard-conditions">
+  <h3 class="hidden">Reporting standard experimental conditions</h3>
+  <div class="practice">
+	<p><span id="rec-lab-18" class="practicelab">Reporting standard experimental conditions</span></p>
+	<p class="practicedesc">...</p>
+
+	<h4 class="subhead" id="why-18">Why</h4>
+	<p>
+	  ...
+	</p>
+	<h4 class="subhead" id="intended-outcome-18" resource="#intended-outcome">Intended Outcome</h4>
+	<p>...
+	  <ul class="benefitsList">
+	    <!-- This text list is replaced by the icons by scripting -->
+	    <li class="hidden">Findability</li>
+	    <li class="hidden">Access</li>
+	    <li class="hidden">Interoperability</li>
+	    <li class="hidden">Reuse</li>
+	    <li class="icon"><img src="W3C-Images/findability.svg" alt="Findability" class="benefitIcon findabilityIcon"></li>
+	    <li class="icon"><img src="W3C-Images/access.svg" alt="Access" class="benefitIcon accessIcon"></li>
+	    <li class="icon"><img src="W3C-Images/interoperability.svg" alt="Interoperability" class="benefitIcon interoperabilityIcon"></li>
+	    <li class="icon"><img src="W3C-Images/reuse.svg" alt="Reuse" class="benefitIcon reuseIcon"></li>
+	  </ul>
+	</p>
+
+	<h4 class="subhead" id="possible-approach-to-implementation-18" resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
+	<p>
+	  ...
+	</p>
+
+	<h4 class="subhead" id="how-to-test-18" resource="#how-to-test">How to Test</h4>
+	<p>
+	  ...
+	</p>
+
+	<h4 class="subhead" id="example-18" resource="#example">Example</h4>
+	  <p>A short example of the recommended approach applied to data emerging from NPDI research.</p>
+  </div>
 </section>
 
-
-<section id="justification" class="informative">
-    <h2>Background and use cases</h2>
+  
 </section>
+      
+
+
 
 
 <section class="informative">
