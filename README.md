@@ -24,9 +24,9 @@ and edit in your fork), or inside a branch to facilitate integration of the chan
 
 A simple way for you to make to make an editing comment in the HTML 
 that I will see and address would be this:
-
-     <aside><b>COMMENT: some comment about the first paragraph</b></aside>
-
+```html
+    <aside><b>COMMENT: some comment about the first paragraph</b></aside>
+```
 ### Issues
 
 Substantial issues in the spec can be reported as issues on github. 
