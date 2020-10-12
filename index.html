@@ -746,7 +746,7 @@
     <p>
         Concomitant use of therapeutic drugs and natural products, including vitamins, minerals, herbal medicinal
         products, and other botanicals, is a frequent occurrence. One study found that approximately 50% of Americans in
-        their midlife were exposed to prescription drugs simultaneously with an dietary supplements, many of which were
+        their midlife were exposed to prescription drugs simultaneously with dietary supplements, many of which were
         natural products [[Kiefer-2014]]. Concomitant exposure raises concerns of possible natural product-drug
         interactions (NPDIs) leading to patient harm. Spanakis et al. reviewed the evidence for 40 top-selling herbal medicinal products and found that 6 were implicated in clinically significant pharmacokinetic NPDIs [[Spanakis-2019]]. Posadzki et al. reported several adverse outcomes of NPDIs including transplant rejection,  cardiovascular collapse, renal and liver toxicity, and death [[Posadzki-2013]]. Wilkinson et al. conducted a review that identified 81 NPDIs between 35 NPs and 31 drug classes [[Wilkinson-2016]].
     </p>
@@ -755,13 +755,13 @@
         pharmacologic mechanisms, and identify potential clinical impact of NPDI exposure. The different kinds of
         datasets that arise from these various kinds of studies range from mass spectrometric to <i>in vitro</i> and <i>in vivo</i>
         pharmacokinetics. The multidisciplinary nature of NPDI research means that there is a large variety of
-        approaches archiving, sharing, and describing the datasets (i.e., metadata).
+        approaches to archiving, sharing, and describing the datasets (i.e., generating metadata).
     </p>
     <p>
         In the face of this complexity, there is a growing recognition by both researchers and agencies that fund
         research that NPDI study datasets should be more findable, accessible, interoperable, and reusable (FAIR)[[McAlpine-2019]][[NIH-NMR-FAIR]]. This
         report proposes a set of recommended approaches to help NPDI researchers make their data more FAIR. After
-        clarifying the intended audience, scope, and context, this report provides  recommendations organized
+        clarifying the intended audience, scope, and context, this report provides recommendations organized
         into general and research-specific categories. To
         obtain a quick overview of the recommendations and follow links to specific FAIR practices, see the <a href="#rec-summary-general">recommendations listing</a>.
     </p>
@@ -773,10 +773,10 @@
     <h2>Audience</h2>
     <p>
         This report is written for anyone who generates NPDI research data. These include, but are not limited
-        to analytical chemists and clinical pharmacologists. Other natural
+        to, analytical chemists and clinical pharmacologists. Other natural
         product stakeholders who will also benefit from the information in this report include funding agencies that
         support NPDI research, biomedical research librarians tasked with searching and/or indexing NPDI datasets, and
-        data scientists working on natural product related analyses.
+        data scientists working on natural product-related analyses.
     </p>
 </section>
 
@@ -822,7 +822,7 @@
         involved in NPDI research. They then reviewed journal
         articles, white papers, and other types of reports that make
         recommendations on how to make biomedical datasets more
-        FAIR. They also reviewed specific requirements related to FAIR
+        FAIR. They also reviewed specific requirements related to FAIR principles
         that are emerging from either organizations that fund NPDI
         research or journals that publish the NPDI studies. All items
         that the contributers reviewed are cited in the
@@ -834,6 +834,9 @@
         are specific to natural product chemistry and NPDI
         pharmacology.
     </p>
+	<aside><b>HS: So if I'm reading this correctly, there are two aims here: a) a)	Disseminate data management/FAIR best practices to a specifically NAPDI-related audience, and 
+		b) to enrich the existing recommendations with ideas arising specifically from NAPDI research, incorporating use cases that might be different from the biomedical use cases typically discussed. 
+		Point b) isn't made explicit but I think it's an interesting/novel contribution to biomedical data curation. To be successful, though, both of these points demand specific, <i>practical</i> applications, which I would like to see built out with more detail.</b></aside>
 
     <figure id="Fig-context">
         <img src="W3C-Images/context-for-recommendations.jpg"
@@ -862,8 +865,9 @@
         <p>This section answers two crucial questions:</p>
         <ul>
             <li>Why this is specifically relevant to making NPDI data FAIR?</li>
-            <li>How does accomplish the goal of making NPDI data FAIR?</li>
+            <li>How does this accomplish the goal of making NPDI data FAIR?</li>
         </ul>
+	    <aside><b>HS: I'm not sure I understand the difference between these two questions.</b></aside>
         <p>A short description of the problem addressed by the recommended approach is also provided. </p>
 
         <h4 class="subhead" id="intended-outcome" resource="#intended-outcome">Intended Outcome</h4>
@@ -1207,7 +1211,7 @@
                 benefits from this practice is that some services that index the scientific literature will index
                 mention of the identifier. This leads to the ability for researchers to locate publications related to a
                 given dataset simply by searching with the identifier.
-		    <aside><b>MR: Also gives credit and also helps track the impact and reuse of data sets.  Allows easier linkages to other research outputs too (Not sure if best here or in BP1).</b></aside>
+		    <aside><b>MR: Gives credit and also helps track the impact and reuse of data sets.  Allows easier linkages to other research outputs too (Not sure if best here or in BP1).</b></aside>
             </p>
 
             <h4 class="subhead" id="intended-outcome-2" resource="#intended-outcome">Intended Outcome</h4>
@@ -1268,6 +1272,7 @@
             <h4 class="subhead" id="intended-outcome-3" resource="#intended-outcome">Intended Outcome</h4>
             <p>Depositing dataset descriptions in public repositories is an important artifact to increase the
                 findability, accessibility, and reuse of data generated by the NPDI research community.
+		<aside><b>HS: This intended outcome could be less tautological...</b></aside>
             <ul class="benefitsList">
                 <!-- This text list is replaced by the icons by scripting -->
                 <li class="hidden">Findability</li>
@@ -1284,11 +1289,17 @@
                 resource="#possible-approach-to-implementation">Possible Approach to Implementation</h4>
             <p>
                 There are a number of repositories that a research could use to satisfy this recommendation including
-                various Dataverse sites[[dataverse]], Zenodo[[zenodo]], Figshare[[figshare]], and Dryad[[dryad]]. A
-                common feature of these repositories is that they ensure dataset descriptions are readable to both humans
+                various Dataverse sites[[dataverse]], Zenodo[[zenodo]], Figshare[[figshare]], and Dryad[[dryad]]. 
+		    
+		    <aside><b>HS: Some of these repositories do not allow metadata-only deposits (which would be, what, a text file? JSON?). They want the data, with accompanying metadata. I am curious why this recommendation is not that the researcher should deposit the <i>dataset</i>, with metadata-only as a compromise if the dataset cannot be deposited for some reason.</b></aside>
+			    
+                A common feature of these repositories is that they ensure dataset descriptions are readable to both humans
                 and computer programs such as web search crawlers. It is relatively common for a research lab to
                 maintain a website that provides links to datasets created by lab members. A description of each dataset
-                could be created and deposited in aforementioned repositories. Alternatively, the lab could write a
+                could be created and deposited in aforementioned repositories. 
+	   <aside><b>HS: To the datasets living where? So the web would be populated with multiple persistent pointers to a single copy of a dataset living elsewhere, possibly not as persistent itself? This is weird, and I'm not saying it's a bad recommendation but I would like to know more about the reasoning behind it.</b></aside>
+	    
+	    Alternatively, the lab could write a
                 human readable dataset description on in a location that is easy for website visitors to locate.
                 However, this will not enable web search crawlers to index the metadata so that the datasets are more
                 easily found via web search. To accomplish that, the website should provide the dataset description in
@@ -1328,10 +1339,11 @@
             <h4 class="subhead" id="why-4">Why</h4>
             <p>
                 A dataset produced from any kind of NPDI study will be more easily found and reused by other researchers
-                if important facts about the dataset are described using standardized metadata elements that make since
+                if important facts about the dataset are described using standardized metadata elements that make sense
                 for the domain. For example, Google's new Dataset Search indexes sites that provide metadata using
                 Schema.org [[google-data-search]].
             </p>
+		<aside><b>HS: This section could make clearer the distinction between a metadata standard (here's what metadata should be generated and how it should be arranged, generally) and a metadata schema (this is how metadata should be written out, with specific calls to controlled elements and controlled vocabulary.) I can work on some references.</b></aside>
             <h4 class="subhead" id="intended-outcome-4" resource="#intended-outcome">Intended Outcome</h4>
             <p> Researchers should be able to find data on the lab website much more easily. The use of standards that
                 are used by data search engines should increase the specificity of natural product-drug interaction
@@ -1473,6 +1485,7 @@
             <p><span id="rec-lab-5" class="practicelab">Whenever possible, make the full dataset downloadable</span></p>
             <p class="practicedesc">Make the full dataset associated with your NPDI experiments downloadable to other
                 interested researchers.</p>
+		<aside><b>HS: Why simply downloadable? Why not also persistent, harvestable on the web, backed up in multiple locations, etc.? (All of which would be accomplished by uploading to a well-established repository.) I understand the "when possible" caveat, and appreciate the "not just by email" note below, but we can do so much better than having datasets scattered across personal/lab websites that will disappear in a decade.</b></aside>
 
             <h4 class="subhead" id="why-5">Why</h4>
             <p>
@@ -1514,11 +1527,13 @@
 	    	    <p>
 	      The researcher who shares data may want to provide a means for future users of the data to ensure that the dataset has been downloaded properly and has not been modified. To do so, the researcher may generate a signature of the data they are sharing using either cryptographic or hash approaches. The signature of the data can then be shared along with the dataset with instructions on how future users can confirm data integrity. 
 	    </p>
+<aside><b>HS: This is another argument for submitting data to a trustworthy data repository, which generate MD5 hashes for each file version as a matter of course.</b></aside>
 
             <h4 class="subhead" id="how-to-test-5" resource="#how-to-test">How to Test</h4>
             <p>
                 Researchers should test to download their data and confirm that it is actually open.
             </p>
+<aside><b>HS: "Open" as in openly accessible? That the file opens? This seems insufficient for the actual goal, which is to make data available.</b></aside>
 
             <h4 class="subhead" id="example-5" resource="#example">Example</h4>
             <p>
@@ -1539,10 +1554,11 @@
 
             <h4 class="subhead" id="why-6">Why</h4>
             <p>
-                Content negotiation make it possible to use single URL for each dataset rather than a different URL for
+                Content negotiation make it possible to use a single URL for each dataset rather than a different URL for
                 each format (e.g., Excel, CSV, XML, JSON, etc.). Clients can request whatever format they need by
                 specifying the format type in the HTTP request.
             </p>
+		<aside><b>HS: Should be more clear that the PID is in the URL.</aside></b>
             <h4 class="subhead" id="intended-outcome-6" resource="#intended-outcome">Intended Outcome</h4>
             <p> A single URL to a given dataset makes access much easier. Also, a single URL is easier to reference and
                 track, increasing the potential for re-use.
@@ -1617,6 +1633,7 @@
             <p><span id="rec-lab-8" class="practicelab">Strive to use standard data elements</span></p>
             <p class="practicedesc">Strive to use standard data elements for both dataset metadata and for dataset
                 fields</p>
+		<aside><b>HS: Why the mention of metadata here? How is that different from Best Practice #3 and #4? Better to focus on solely data here.</b></aside>
 
             <h4 class="subhead" id="why-8">Why</h4>
             <p>
@@ -1650,6 +1667,7 @@
                 Zenodo [[zenodo]], Figshare [[figshare]], and most university/research institute data catalogs satisfy
                 this recommendation.
             </p>
+	    <aside><b>HS: As noted above, this is a rehash of #3 and #4.</b></aside>
             <p>
                 For datasets (rather than dataset metadata), researchers should aim to maximize the reuse terms from
                 existing broadly used ontologies and/or terminologies for data fields and values. One simple approach
@@ -1825,7 +1843,7 @@ X-Request-ID: e27fd595bdb4d5d9dffbfe93023eb575
             <p><span id="rec-lab-10" class="practicelab">Provide a license for data usage</span></p>
             <p class="practicedesc">Provide a license for data usage</p>
 
-            See See the recommendation <a href="https://www.w3.org/TR/dwbp/#licenses" target=_blank>Provide data license
+            See the recommendation <a href="https://www.w3.org/TR/dwbp/#licenses" target=_blank>Provide data license
             information</a> in the W3C report "Data on the Web Best Practices" [[dwbp]].
         </div>
     </section>
@@ -1897,6 +1915,7 @@ X-Request-ID: e27fd595bdb4d5d9dffbfe93023eb575
             <p class="practicedesc">NPDI researcher should provide a raw data file derived from assays that
                 identify and quantify the chemical constituents present in natural products, for both mass spectrometry
                 (MS) and nuclear magnetic resonance (NMR) analysis in an open, or at least well-documented, file format.</p>
+		<aside><b>Why is this specific to chemistry? Should be done in every domain, though examples with special attention to NAPDI chemistry would surely be useful.</aside></b>
 
             <h4 class="subhead" id="why-12">Why</h4>
             <p>
@@ -2032,6 +2051,7 @@ X-Request-ID: e27fd595bdb4d5d9dffbfe93023eb575
                      class="practicelab">Report experiment metadata along with the spectral raw data file</span></p>
             <p class="practicedesc">Experimental metadata have to be reported with the spectral raw data file and
                 results following standards. </p>
+		<aside><b>HS: This is another one that is a good idea for all domains... is the idea here that NAPDI chemistry researchers are likely to skip straight to this section, so there are general recommendations packaged specifically for them? If so, I think that could use more contextualization, and a check to make sure that the general audience isn't missing out on any good recommendations in the more specific sections (for example, avoiding proprietary file formats.)</b></aside>
 
             <h4 class="subhead" id="why-14">Why</h4>
             <p>
@@ -2041,6 +2061,7 @@ X-Request-ID: e27fd595bdb4d5d9dffbfe93023eb575
             <h4 class="subhead" id="intended-outcome-14" resource="#intended-outcome">Intended Outcome</h4>
 
             <p>This will benefit the research community by improving its findability, interoperability, and reuse.
+	    <aside><b>HS: Tautology?</b></aside>
             <ul class="benefitsList">
                 <!-- This text list is replaced by the icons by scripting -->
                 <li class="hidden">Findability</li>
